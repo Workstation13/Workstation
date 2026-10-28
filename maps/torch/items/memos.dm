@@ -167,11 +167,7 @@
 
 /obj/item/paper/memo/generic/notoffical
 	name = "offical guides"
-	info = {"Some "internal use only" reports on inter-departmental communications, reminding personnel that unless the document specifies it is from and issued by EXO or Expeditionary Command, it is not offical policy and should not be referenced as a definitive reasoning for any action."}
-
-/obj/item/paper/memo/generic/sexplorer
-	name = "\improper EC rank abbreviations"
-	info = {"Some "internal use only" reports on proper and improper ways of abbreviating explorer ranks and roles, including emphasis that "sexplorer" is NOT an authorized way, shorthand or otherwise, to refer to senior explorers."}
+	info = {"Some "internal use only" reports on inter-departmental communications, reminding personnel that unless the document specifies it is from and issued by Nanotrasen or Union Council, it is not offical policy and should not be referenced as a definitive reasoning for any action."}
 
 /obj/item/paper/memo/generic/sublt
 	name = "fleet rank abbreviations"
@@ -188,17 +184,13 @@
 
 // magistrate memos
 
-/obj/item/paper/memo/magistrate/skrelljokes
-	name = "internal conversation record"
-	info = {"A "confidential" discussion between several Sol Government Representatives, including some crass jokes on if Skrell being squished would burst like a water balloon or squish like a jam sandwich."}
-
 /obj/item/paper/memo/magistrate/spicypolitics
 	name = "internal conversation record"
-	info = {"A "confidential" discussion between several Sol Government Representatives, including some interesting political tidbits. Seems like most of them are going to be supporting more conservative, Sol-centric parties next election, voicing annoyance at having to deal with hissing lizards and warbling frogs."}
+	info = {"A "confidential" discussion between several government officials, including some interesting political tidbits. Seems like most of them are going to be supporting more conservative, Sol-centric candidates next election, voicing annoyance at having to deal with "mouth-breathing activists" and "colony welfare queens"."}
 
 /obj/item/paper/memo/magistrate/deskfires
 	name = "important notice"
-	info = {"A "confidential" notice issued to Sol Government Representatives, informing them of an office fire caused by improper cigarette ash management."}
+	info = {"A "confidential" notice issued to circuit judges, informing them of an office fire caused by improper cigarette ash management."}
 
 /obj/item/paper/memo/magistrate/boringreports
 	name = "\improper Torch project status update #132"
@@ -206,7 +198,7 @@
 
 /obj/item/paper/memo/magistrate/documentdamage
 	name = "important notice"
-	info = {"A "confidential" notice issued to Sol Government Representatives, informing them that many documents were damaged last week due to "inappropriate sleep management". It urges all diplomatic staff to self-monitor their sleeping schedule and to regulate their caffeine intake."}
+	info = {"A "confidential" notice issued to court officers, informing them that many documents were damaged last week due to "inappropriate sleep management". It urges all judicial staff to self-monitor their sleeping schedule and to regulate their caffeine intake."}
 
 /obj/item/paper/memo/magistrate/documentdisposal
 	name = "proper document disposal"
@@ -214,27 +206,15 @@
 
 /obj/item/paper/memo/magistrate/yourjob
 	name = "\improper SCG and you"
-	info = {"Some "confidential" briefing documents, detailing the job of the Magistrate in brief. It highlights they are a civilian, first and foremost, who functions as a general-purpose civil servant aboard the SEV Torch. They also should advise the Commanding Officer, assisting with bureaucratic affairs where required, and spearheading diplomatic negotations. At the bottom, underlined several times and in bold is "YOU ARE NOT A LAWYER"."}
+	info = {"Some "confidential" briefing documents, detailing the job of the Magistrate in brief. It highlights they are a justice of the court, first and foremost, who functions as a general-purpose civil servant aboard the NEV Torch. They also should advise the Captain, assisting with bureaucratic affairs where required, and ensure Due Process and civil rights are observed. At the bottom, underlined several times and in bold is "YOU ARE NOT A SECURITY OFFICER"."}
 
 /obj/item/paper/memo/magistrate/perdiemdeny
 	name = "per diem denials"
-	info = {"An "internal use only" document, explaining what not to file per diem reimbursement requests on. It lists examples of many per diem requests SCG representatives have filed in the past that have been denied. Some of the more interesting ones include casino debts, a request for per diem to cover the increased tax on alcohol on a station, and one odd case involving a possum, engineering PPE, and two injuries."}
-
-/obj/item/paper/memo/magistrate/execution
-	name = "formal complaint"
-	info = {"A confidential memo from Rear Admiral Lambert of the SFV Bismarck issuing a formal complaint on behalf of Fleet regarding the execution of SLT Kristen Rohtin aboard a Corps vessel. The tone is furious and suggests significant consequences for the Expeditionary Corps."}
-
-/obj/item/paper/memo/magistrate/floritstatement
-	name = "undersecretary statement"
-	info = {"A press release issued by the newly-appointed Undersecretary of Diplomatic Affairs, Isabel Florit. The statement assures the public that there will be "no repeats" of the mistakes carried out in recent months aboard the SEV Torch. It goes on to advocate the role of the Defense Forces in public affairs, and suggests that the Diplomatic Affairs office will be working closely with the SCG Fleet under Florit's leadership in the interest of preventing any further incidents."}
-
-/obj/item/paper/memo/magistrate/senateminutes
-	name = "assembly floor proceedings"
-	info = {"A copy of the minutes from the Sol Assembly hearing over an emergency bill giving the SCG Defense Forces jurisdiction over the Expeditionary Corps (and by extension, the SEV Torch). The debate is vicious and devolves into angry bickering at points. The bill appears to have gotten uncomfortably close to being passed."}
+	info = {"An "internal use only" document, explaining what not to file per diem reimbursement requests on. It lists examples of many per diem requests government officials have filed in the past that have been denied. Some of the more interesting ones include casino debts, a request for per diem to cover the increased tax on alcohol on a station, and one odd case involving a possum, engineering PPE, and two injuries."}
 
 /obj/item/paper/memo/magistrate/radicals
 	name = "radicalization investigation report"
-	info = {"A summary of a Senate investigation into the radicalization of government employees. The findings appear somewhat grim, with long lists of reports of politics seeping its way into the everyday functions of the Fleet, Diplomatic Service, SFP, and Expeditionary Corps. While the report clarifies that no major incidents have occurred thus far, the intertwining of politics and governmental operations will likely have grave consequences if let run rampant."}
+	info = {"A summary of a Congressional investigation into the radicalization of government employees. The findings appear somewhat grim, with long lists of reports of politics seeping its way into the everyday functions of the Military, Civil Service, Judicary, and Chambers of Commerce. While the report clarifies that no major incidents have occurred thus far, the intertwining of politics and governmental operations will likely have grave consequences if let run rampant."}
 
 
 // command memos
@@ -242,10 +222,6 @@
 /obj/item/paper/memo/command/saluting
 	name = "saluting etiquette"
 	info = {"Some "internal use only" reports on the saluting habits of junior officers, specifically regarding the amount of cases where junior officers cause damage to objects and floor tiles by dropping items to salute their superiors."}
-
-/obj/item/paper/memo/command/unathiwork
-	name = "Sinta'unathi behavioral guide"
-	info = {"An "internal use only" memo from a mid-level officer at Expeditionary Command containing common sinta'unathi behaviors that help explain some of their quirky behaviors. A bullet list contains various hints such as "thumping the tail is a sign of itchiness", "unathi hiss when they are angry", and "letting you touch their tail is a sign of great trust". The document seems very hastily-made and you're not sure you trust it fully."}
 
 /obj/item/paper/memo/command/blastpain
 	name = "incident report"
@@ -265,7 +241,7 @@
 
 /obj/item/paper/memo/command/fraternizationissues
 	name = "anti-fraternization memo"
-	info = {"An "internal use only" memo sent from the Bosun to all infirmary staff informing them that, yes, inappropriate relationships are also forbidden for corpsmen and medical technicians. It highlights that further instances of fraternization can and will result in non-judical punishment and reminds all staff that the provision of medical care is their first priority."}
+	info = {"An "internal use only" memo sent from the Corporate Liaison to all infirmary staff informing them that, yes, inappropriate relationships are also forbidden for paramedics and medical technicians. It highlights that further instances of fraternization can and will result in disciplinary action and reminds all staff that the provision of medical care is their first priority."}
 
 /obj/item/paper/memo/command/bunnybirdissues
 	name = "bridge officer hallucination issues"
@@ -273,7 +249,7 @@
 
 /obj/item/paper/memo/command/bunnytraining
 	name = "bridge officer qualification status"
-	info = {"An "internal use only" memo sent from the Commanding Officer to the heads of staff reminding them that bridge officers are qualified in communications and bridge operations and do not, in fact, double as naval infantry. They should not be deployed like such during minor security incidents, citing numerous reports of broken legs and feet being shot due to mishandling of weapons."}
+	info = {"An "internal use only" memo sent from the Captain to the heads of staff reminding them that bridge officers are qualified in communications and bridge operations and do not, in fact, double as naval infantry. They should not be deployed like such during minor security incidents, citing numerous reports of broken legs and feet being shot due to mishandling of weapons."}
 
 /obj/item/paper/memo/command/comm
 	name = "\improper Zurich Common reminder"
@@ -281,15 +257,15 @@
 
 /obj/item/paper/memo/command/punishments
 	name = "disposition of offenses"
-	info = {"A "for official use only" memorandum detailing an officer's options with regards to punishing uniformed servicemembers. In ascending order of severity, the officer can: take no action (after investigation), take administrative action, impose nonjudicial punishment, and court-martial the offender."}
+	info = {"A "for official use only" memorandum detailing an officer's options with regards to punishing crewmembers. In ascending order of severity, the officer can: take no action (after investigation), take administrative action, impose nonjudicial punishment, issue judicial punishment, and place the offender on trial."}
 
 /obj/item/paper/memo/command/realitybreak
 	name = "\improper Bluespace drive apparitions"
-	info = {"An "internal use only" memo sent from Expeditionary Command, based on a document from Krri'gli Engineering. It states that any humanoid figures seen during a bluespace jump are incorporeal apparitions and no mind should be paid to them, even if they appear familiar. In addition, it notes the existence of a bluespace "double" that living crew may experience and strongly urges them not to touch said double, as tempting as it may be, citing many cases of irrecoverable catatonia in those who have."}
+	info = {"An "internal use only" memo sent from the NanoTrasen Board of Directors, based on a document from NanoTrasen R&D. It states that any humanoid figures seen during a bluespace jump are incorporeal apparitions and no mind should be paid to them, even if they appear familiar. In addition, it notes the existence of a bluespace "double" that living crew may experience and strongly urges them not to touch said double, as tempting as it may be, citing many cases of irrecoverable catatonia in those who have."}
 
 /obj/item/paper/memo/command/njprules
 	name = "non-judicial punishments"
-	info = {"A "for official use only" memorandum detailing options with regards to non-judicially punishing uniformed servicemembers. Such punishments include admonishment/reprimand, forfeiture of pay, restriction, extra duty, and reduction in rank. The punishments available and their severity depend on the rank of the accused and the imposing officer."}
+	info = {"A "for official use only" memorandum detailing options with regards to non-judicially punishing crewmembers. Such punishments include admonishment/reprimand, forfeiture of pay, restriction, extra duty, and reduction in rank. The punishments available and their severity depend on the rank of the accused and the imposing officer."}
 
 /obj/item/paper/memo/command/outpostreport
 	name = "E-14b outpost report"
@@ -297,45 +273,33 @@
 
 /obj/item/paper/memo/command/evasiveflight
 	name = "evasive flight maneuvers"
-	info = {"A hastily-penned report detailing strategies for evading ship-to-ship laser fire and missile strikes in the event of another attack on the Torch. The author highly recommends the tactical use of space dust and other debris, citing the successful evasive action taken during the attack by the SFV Nathan Hale."}
+	info = {"A hastily-penned report detailing strategies for evading ship-to-ship laser fire and missile strikes in the event of an attack on the Torch. The author highly recommends the tactical use of space dust and other debris, citing the successful evasive action taken during an attack by pirates."}
 
 /obj/item/paper/memo/command/confedsightings
-	name = "confederate naval protocols"
-	info = {"An "internal use only" memo sent from the Government Representative to the bridge crew reminding them that the SCG is, and will for the foreseeable future, be a peace with the GCC. As such, it is entirely unneeded to 'batten down the hatches' and prepare the ship for hostilities at the mere sighting of a Confederate Naval Vessel, and that such preparations implies Xenophobic tendencies and increases the probability of diplomatic incidents."}
-
-/obj/item/paper/memo/command/pioneerpranks
-	name = "pioneer prank reports"
-	info = {"An "internal use only" memo sent from Expeditionary Command reporting on an increase in "friendly pranks" between the Expeditionary Corps and Pioneerng Corps. The report details how the warming of relations between the two Corps has brought pranks usually kept within the Expeditonary Corps into the inter-Corps realm. The report advises Non-Expeditionary Corps personnel to interpret Pioneers acting oddly as nothing more than attempts at pranking a EC vessel. It lists an example of how a Pioneer crew used the derelict hull of a cargo vessel to scare the SEV Komarov into believing they were being followed by a ghost ship."}
+	name = "third party spacefarer protocols"
+	info = {"An "internal use only" memo sent from the Magistrate to the bridge crew reminding them that the Torch is, and will for the foreseeable future, be at peace in frontier space. As such, it is entirely unneeded to 'batten down the hatches' and prepare the ship for hostilities at the mere sighting of a third party Vessel, and that such preparations implies Xenophobic tendencies and increases the probability of diplomatic incidents."}
 
 /obj/item/paper/memo/command/miranda
 	name = "miranda line caution"
-	info = {"A notice from the Ministry of Stellar Charts to the command of the SEV Torch. It is long and full of technical Cartography, but is quite clearly summarized when it says "although the Miranda Line was drawn as the edge of 'Known' Space during the Collapse of the Terran Commonwealth, the Space you are exploring was known to Humanity, but the charts were lost, it is not impossible for you to come across evidence of previous human presence."}
+	info = {"A notice from the Ministry of Stellar Charts to the command of the NEV Torch. It is long and full of technical Cartography, but is quite clearly summarized when it says "although the Miranda Line was drawn as the edge of 'Known' Space during the Collapse of the Terran Commonwealth, the Space you are exploring was known to Humanity, but the charts were lost, it is not impossible for you to come across evidence of previous human presence."}
 
 /obj/item/paper/memo/command/testing
 	name = "research testing complaints"
-	info = {"A growing stack of interdepartmental complaints from various members of the Engineering department concerning the repeated instances of explosives testing in the Science department aboard the ship. It heavily implies that should further occurances of damage to the Vessel take place, engineering staff may "cause bureaucratic barricades". A handwritten note at the bottom of the memo from the Chief of Security advises heavy handed legal consequences for those involved with testing in the event of future explosive related incidents to prevent "understandable yet annoying actions" from the engineering department in the form of more paperwork.."}
+	info = {"A growing stack of interdepartmental complaints from various members of the Engineering department concerning the repeated instances of explosives testing in the Science department aboard the ship. It heavily implies that should further occurances of damage to the Vessel take place, engineering staff may "cause bureaucratic barricades". A handwritten note at the bottom of the memo from the Magistrate advises heavy handed legal consequences for those involved with testing in the event of future explosive related incidents to prevent "understandable yet annoying actions" from the engineering department in the form of more paperwork.."}
 
 // supply memos
 
-/obj/item/paper/memo/supply/skrellcookery
-	name = "food for alien species memo"
-	info = {"An "internal use only" memo sent from the Executive Officer on behalf of Expeditionary Command detailing how to provision meals for Skrell crew. The memo seems to be vaguely misinformed and claims that Skrell should only be given hallucinogenic mushrooms and toast."}
-
-/obj/item/paper/memo/supply/gasprovisioning
-	name = "food for alien species memo"
-	info = {"An "internal use only" memo sent from the Executive Officer on behalf of expeditionary command detailing how to provision meals for Giant Armored Serpentid staff. It implies quite heavily that cost is a concern, and they should not be given meat except in exceptional circumstances and should otherwise only be given cheap cabbage."}
-
 /obj/item/paper/memo/supply/shotgunblues
 	name = "in defense of the bar"
-	info = {"An "internal use only" memo sent from the Executive Officer on behalf of Expeditionary Command detailing that the service department does not need self-defense weapons, and any arguments to the contrary will be handled internally. A personal memo has been added; an underlined "STOP ASKING US" penned onto the page."}
+	info = {"An "internal use only" memo sent from the Executive Officer on behalf of the Union detailing that the service department does not need self-defense weapons, and any arguments to the contrary will be handled internally. A personal memo has been added; an underlined "STOP ASKING US" penned onto the page."}
 
 /obj/item/paper/memo/supply/shipping
 	name = "shipping report"
-	info = {"Some "internal use only" reports about the recent items coming and going from Expeditionary Corps vessels, with 70% of the orders being filed as replacement chemical cartridges."}
+	info = {"Some "internal use only" reports about the recent items coming and going from Union vessels, with 70% of the orders being filed as replacement chemical cartridges."}
 
 /obj/item/paper/memo/supply/shipping2
 	name = "shipping report"
-	info = {"Some "internal use only" reports about the recent items coming and going from Expeditionary Corps vessels, with 70% of the orders being filed as being nanoblood."}
+	info = {"Some "internal use only" reports about the recent items coming and going from Union vessels, with 70% of the orders being filed as being nanoblood."}
 
 /obj/item/paper/memo/supply/wrongchute
 	name = "research complaint"
@@ -363,15 +327,15 @@
 
 /obj/item/paper/memo/engineering/repairs
 	name = "maintenance reports"
-	info = {"Some "confidential" reports regarding the state of the SEV Torch. Of note are the rusty cistern, faulty disposal pipes, clogged sinks, and an under-sized atmospheric system."}
+	info = {"Some "confidential" reports regarding the state of the NEV Torch. Of note are the rusty cistern, faulty disposal pipes, clogged sinks, and an under-sized atmospheric system."}
 
 /obj/item/paper/memo/engineering/shieldsoff
 	name = "shielding recommendations"
-	info = {"Some "internal use only" reports suggesting atmospheric containment should be disabled on all Expeditionary Corps vessels."}
+	info = {"Some "internal use only" reports suggesting atmospheric containment should be disabled on all Union vessels."}
 
 /obj/item/paper/memo/engineering/shieldson
 	name = "shielding recommendations"
-	info = {"Some "internal use only" reports suggesting atmospheric containment should be enabled on all Expeditionary Corps vessels."}
+	info = {"Some "internal use only" reports suggesting atmospheric containment should be enabled on all Union vessels."}
 
 /obj/item/paper/memo/engineering/ladder
 	name = "ladder pamphlet"
@@ -391,11 +355,11 @@
 
 /obj/item/paper/memo/engineering/bsddamage
 	name = "\improper Bluespace drive safety notice"
-	info = {"A "confidential" memo from Krri'gli Engineering regarding the new Bluespace drive. It explains in very slow and simple language that this is a "Bluespace drive", a very expensive and volatile piece of machinery, and that you should not break this one or remove the exotic particle shielding. The author does not appear to have a very high opinion of human engineering or mental faculties."}
+	info = {"A "confidential" memo from NanoTrasen R&D regarding the new Bluespace drive. It explains in very slow and simple language that this is a "Bluespace drive", a very expensive and volatile piece of machinery, and that you should not break this one or remove the exotic particle shielding. The author does not appear to have a very high opinion of union engineering or mental faculties."}
 
 /obj/item/paper/memo/engineering/maintventing
 	name = "venting complaint"
-	info = {"A "sensitive" memo from a formerly Enlisted contractor aboard the Torch. In somewhat colourful language it outlines how a single breach of the hull anywhere in the maintenance corridors will vent the entirety of the corridors on that side of the vessel. Attached are almost identical copies of the complaint, each filed exactly a year before the previous one, dating back to the Torch's refit in 2305."}
+	info = {"A "sensitive" memo from an engineer aboard the Torch. In somewhat colourful language it outlines how a single breach of the hull anywhere in the maintenance corridors will vent the entirety of the corridors on that side of the vessel. Attached are almost identical copies of the complaint, each filed exactly a year before the previous one, dating back to the Torch's refit in 2305."}
 
 /obj/item/paper/memo/engineering/researchbombs
 	name = "testing complaint"
@@ -422,7 +386,7 @@
 
 /obj/item/paper/memo/medical/jackets
 	name = "medical mistreatments"
-	info = {"Some "confidential" reports that apparently led to the removal of the straightjacket on all Expeditionary Corps vessels. Inhumane but deemed necessary treatments were applied with the help of those."}
+	info = {"Some "confidential" reports that apparently led to the removal of the straightjacket on all Union vessels. Inhumane but deemed necessary treatments were applied with the help of those."}
 
 /obj/item/paper/memo/medical/ipccpr
 	name = "\improper IPC CPR notice"
@@ -454,7 +418,7 @@
 
 /obj/item/paper/memo/medical/madaboutfrat
 	name = "sub-acute ward notice"
-	info = {"An "internal use only", hastily hand-written note from a civilian doctor stating that "The sub-acute ward is for NON-CRITICAL PATIENTS and not FLIRTING, YOU BUFFOONS!" They appear to have smashed the point of their marker into the note on the exclamation point's dot, and a small tear is present."}
+	info = {"An "internal use only", hastily hand-written note from a surgeon stating that "The sub-acute ward is for NON-CRITICAL PATIENTS and not FLIRTING, YOU BUFFOONS!" They appear to have smashed the point of their marker into the note on the exclamation point's dot, and a small tear is present."}
 
 /obj/item/paper/memo/medical/bandages
 	name = "helpful trainee reminder"
@@ -470,27 +434,27 @@
 
 /obj/item/paper/memo/exploration/incident
 	name = "incident report"
-	info = {"Some "confidential" reports about an incident caused by the exploration department. While it has many pages, the front cover summarizes it very tersely: explorers should not be firing the ballistic launcher in flammable atmospheres. Ignition and subsequent burning of the entire exoplanet may occur."}
+	info = {"Some "confidential" reports about an incident caused by the acquisitions department. While it has many pages, the front cover summarizes it very tersely: Acquisitions Techs should not be firing the ballistic launcher in flammable atmospheres. Ignition and subsequent burning of the entire exoplanet may occur."}
 
 /obj/item/paper/memo/exploration/incident2
 	name = "incident report"
-	info = {"Some "confidential" reports regarding airlock-related injuries in the previous month across all Expeditionary Corps vessels. That number seems rather high."}
+	info = {"Some "confidential" reports regarding airlock-related injuries in the previous month across all Union vessels. That number seems rather high."}
 
 /obj/item/paper/memo/exploration/incident3
 	name = "incident report"
-	info = {"Some "confidential" reports about an incident caused by an Expeditionary Corps officer's incompetence that nearly killed a person under their supervision. The apparent cause was an unsafe craft departure."}
+	info = {"Some "confidential" reports about an incident caused by a Union officer's incompetence that nearly killed a person under their supervision. The apparent cause was an unsafe craft departure."}
 
 /obj/item/paper/memo/exploration/confuseexplo
 	name = "incident report"
-	info = {"Some "confidential" reports regarding numerous newly-enlisted explorers being unaware of the Expeditionary Corps, its Mission, or what training they received. An officer has attached a note to the bottom, commenting on possible cryostasis injuries. It's been circled and has several question marks."}
+	info = {"Some "confidential" reports regarding numerous newly-enlisted acquisitions techs being unaware of the Union, the Torch's Mission, or what training they received. An officer has attached a note to the bottom, commenting on possible cryostasis injuries. It's been circled and has several question marks."}
 
 /obj/item/paper/memo/exploration/colddeadhands
 	name = "incident report"
-	info = {"A "confidential" notice reminding exploration that the recovery of unnecessary equipment from the deceased during explorations is vehemently discouraged and that future cases will be punished by forfeiture of pay."}
+	info = {"A "confidential" notice reminding acquisitions that the recovery of "unnecessary" equipment from the deceased during explorations is discouraged and that future cases will result in disciplinary action. The memo doesn't specifiy what kind of equipment should be considered unnecessary."}
 
 /obj/item/paper/memo/exploration/acquisition_bossproblems
-	name = "pathfinder protocol reminder"
-	info = {"A "confidential" memo sent from the Executive Officer to the pathfinder reminding them that, yes, their pilot is there to fly the Charon, not them, and that, yes, they should ensure that the exploration shotgun is only used by trained personnel. The final bit is very tersely-written, advising them to stop explorers from looking directly into the barrel."}
+	name = "expedition weaponry protocol reminder"
+	info = {"A "confidential" memo sent from the Executive Officer to the acquisitions boss reminding them that, yes, their pilot is there to fly the Charon, not them, and that, yes, they should ensure that the exploration shotgun is only used by trained personnel. The final bit is very tersely-written, advising them to stop acquisitions techs from looking directly into the barrel."}
 
 /obj/item/paper/memo/exploration/hangarproc
 	name = "don't force the fucking airlock"
@@ -502,15 +466,15 @@
 
 /obj/item/paper/memo/exploration/charonsafety
 	name = "fuel safety report"
-	info = {"Some "internal use only" reports about personnel smoking near the atmospherics holding area aboard the SEV Charon. The atmospherics holding area aboard the Charon is declared a no-smoking area, as indicated by the sign. Attached is a brief incident report with a contracted pilot. The report ends with large-font writing stating the next person found smoking near the fueling port will be demoted to sanitation tech for the rest of their deployment."}
+	info = {"Some "internal use only" reports about personnel smoking near the atmospherics holding area aboard the NEV Charon. The atmospherics holding area aboard the Charon is declared a no-smoking area, as indicated by the sign. Attached is a brief incident report with a pilot. The report ends with large-font writing stating the next person found smoking near the fueling port will be demoted to sanitation tech for the rest of their deployment."}
 
 /obj/item/paper/memo/exploration/survivors
 	name = "interactions with survivors"
-	info = {"Some "internal use only" reports discussing the process of dealing with survivors, off-ship personnel, or in-distress civilians. This one details three points that all explorers, Fleet servicemembers, or contractor personnel should attempt to follow when dealing with off-ship persons: First, treat them with the utmost respect at all times, as they are the ones who need aid. Second, do not directly order them around, unless they happen to be getting in the way of SCG objectives. Third, remind them of their rights - they are requiring aid and are to be treated with the best handling, but remind them that they are still on SCG property, and are subject to SCG law at all times."}
+	info = {"Some "internal use only" reports discussing the process of dealing with survivors, off-ship personnel, or in-distress civilians. This one details three points that all acquisitions techs, Union members, or corporate personnel should attempt to follow when dealing with off-ship persons: First, treat them with the utmost respect at all times, as they are the ones who need aid. Second, do not directly order them around, unless they happen to be getting in the way of Mission objectives. Third, remind them of their rights - they are requiring aid and are to be treated with the best handling, but remind them that they are still on corporate property, and are subject to Space Law at all times."}
 
 /obj/item/paper/memo/exploration/cigarettes
 	name = "cigarettes with helmets"
-	info = {"Some "internal use only" reports detailing the extreme hazards of attempting to smoke a cigarette while wearing a spaceproof helmet, citing many incidents of suffocation and subsequent death as well as pointing out the presence of a "No Smoking" sign onboard the Charon and the likely flammability of many exoplanets. It concludes with a recommendation to smoke only in designated breakrooms aboard the SEV Torch and not when wearing a helmet."}
+	info = {"Some "internal use only" reports detailing the extreme hazards of attempting to smoke a cigarette while wearing a spaceproof helmet, citing many incidents of suffocation and subsequent death as well as pointing out the presence of a "No Smoking" sign onboard the Charon and the likely flammability of many exoplanets. It concludes with a recommendation to smoke only in designated breakrooms aboard the NEV Torch and not when wearing a helmet."}
 
 /obj/item/paper/memo/exploration/documentplease
 	name = "on documentation of sites"
@@ -518,7 +482,7 @@
 
 /obj/item/paper/memo/exploration/pioneers
 	name = "pioneers and you"
-	info = {"An "internal use only" memo detailing proper ettiquette for explorers interacting with Confederate Pioneer Corps personnel. It stresses very heavily that yes, most Confederates do speak ZAC; no, you should not share your funny Pan-Slavic impression; and no, you should ABSOLUTELY not ask if they know any war criminals."}
+	info = {"An "internal use only" memo detailing proper ettiquette for expedition crew interacting with offship spacefarers. It stresses very heavily that yes, most rimworlders do speak ZAC; no, you should not share your funny Spacer impression; and no, you should ABSOLUTELY not ask if they know any war criminals."}
 
 /obj/item/paper/memo/exploration/mice
 	name = "invasive species and shuttles"
@@ -532,7 +496,7 @@
 
 /obj/item/paper/memo/research/annoyingtheft
 	name = "abuse of access to tools memo"
-	info = {"An "internal use only" memo sent from the Research Director to the acquisitions boss reminding them that the access to the Petrov is not to be abused, further asking that the acquisitions boss crack down on any explorers looting equipment from the Petrov for their "missions". It ends with a note that they have their own equipment that they should be using instead."}
+	info = {"An "internal use only" memo sent from the Research Director to the acquisitions boss reminding them that the access to the Petrov is not to be abused, further asking that the acquisitions boss crack down on any acquisitions techs looting equipment from the Petrov for their "missions". It ends with a note that they have their own equipment that they should be using instead."}
 
 /obj/item/paper/memo/research/toxinsfire
 	name = "toxin development memo"
@@ -560,7 +524,7 @@
 
 /obj/item/paper/memo/corporate/stipendcut
 	name = "corporate spending records"
-	info = {"A "confidential" memo on the current usage of funds provided to SEV Torch corporate liaisons; apparently there's threats of a strike over a cut to the cost-of-living stipends by the head office."}
+	info = {"A "confidential" memo on the current usage of funds provided to NEV Torch corporate liaisons; apparently there's threats of a strike over a cut to the cost-of-living stipends by the head office."}
 
 /obj/item/paper/memo/corporate/uniondues
 	name = "union dues reminder"
@@ -571,8 +535,8 @@
 	info = {"Some "internal use only" corporate documents detailing the proper ways to dispose of top secret and classified documents. It highlights that burning is most applicable, and shows pictures of shredded documents reconstructed with glue and sticky tape with a red "Fail" written below."}
 
 /obj/item/paper/memo/corporate/exointerest
-	name = "\improper EXO and you"
-	info = {"Some "confidential" corporate documents directed to the corporate liasion, informing them that their job is to represent EXO and its immediate interests, which are to ensure the SEV Torch is able to maintain the currently defined direction that is within the interests of EXO as a whole."}
+	name = "\improper NanoTrasen and you"
+	info = {"Some "confidential" corporate documents directed to the corporate liasion, informing them that their job is to represent NanoTrasen and its immediate interests, which are to ensure the NEV Torch is able to maintain the currently defined direction that is within the interests of NanoTrasen as a whole."}
 
 /obj/item/paper/memo/corporate/thequarterly
 	name = "quarterly budget report"
@@ -584,25 +548,25 @@
 
 /obj/item/paper/memo/corporate/spellchecker
 	name = "spellchecking and you"
-	info = {"Some "internal use only" corporate memos reminding corporate liaisons to proofread reports. It details various reasons behind why correct spelling and punctuation help in making EXO and Expeditionary Command take your report seriously."}
+	info = {"Some "internal use only" corporate memos reminding corporate liaisons to proofread reports. It details various reasons behind why correct spelling and punctuation help in making NanoTrasen and the Board take your report seriously."}
 
 /obj/item/paper/memo/corporate/safetyfirst
 	name = "contractor safety and you"
-	info = {"An "internal use only" corporate document reminding corporate liaisons to report any unsafe behavior from contractors that they either see directly or is reported to them. It goes on to explain that ensuring the health and safety compliance of those under contract not only helps to keep up an image of security but ensures that the reputation of EXO as a whole is not tarnished due to a workplace accident."}
+	info = {"An "internal use only" corporate document reminding corporate liaisons to report any unsafe behavior from contractors that they either see directly or is reported to them. It goes on to explain that ensuring the health and safety compliance of those under contract not only helps to keep up an image of security but ensures that the reputation of NanoTrasen as a whole is not tarnished due to a workplace accident."}
 
 /obj/item/paper/memo/corporate/legion
 	name = "internal communications"
-	info = {"A stack of "confidential" communications inside the EXO pertaining to the recent encounter with the 'Legion'. The almost unregulated panic among some of the discussions is quite clear, with the overall worry more focused on possible financial losses then danger to the SCG or SCG personnel."}
+	info = {"A stack of "confidential" communications inside NanoTrasen pertaining to the recent encounter with the 'Legion'. The almost unregulated panic among some of the discussions is quite clear, with the overall worry more focused on possible financial losses then danger to ship personnel."}
 
 /obj/item/paper/memo/corporate/miranda
 	name = "miranda line memo"
-	info = {"A "secret" memo from the EXO Head Office. It is somewhat lacking in specifics, but is quite clear that should the Torch locate any traces of human presence past the Miranda Line, that any involvement whatsoever of the EXO or its subsidiaries in the presence is to be denied."}
+	info = {"A "secret" memo from the NanoTrasen Headquarters. It is somewhat lacking in specifics, but is quite clear that should the Torch locate any traces of human presence past the Miranda Line, that any involvement whatsoever of NanoTrasen or its subsidiaries in the presence is to be denied."}
 
 // security memos
 
 /obj/item/paper/memo/security/carrieroverkill
 	name = "security medical report"
-	info = {"An "internal use only" report shared with security by medical on various masters at arms, noting a very large amount of chafing in the chest region due to continuous patrols while wearing plate carriers without reason."}
+	info = {"An "internal use only" report shared with security by medical on various security personnel, noting a very large amount of chafing in the chest region due to continuous patrols while wearing plate carriers without reason."}
 
 /obj/item/paper/memo/security/pepperoveruse
 	name = "inter-department complaint"
@@ -614,11 +578,11 @@
 
 /obj/item/paper/memo/security/mre
 	name = "counterfeit MRE warning"
-	info = {"An "internal use only" warning  all masters at arms to watch out for counterfeit MREs being snuck inside vending machines. They reportedly contain crayons instead of actual food."}
+	info = {"An "internal use only" warning all security officers to watch out for counterfeit MREs being snuck inside vending machines. They reportedly contain crayons instead of actual food."}
 
 /obj/item/paper/memo/security/laepuse
 	name = "\improper LAEP-90 manual"
-	info = {"An "internal use only" manual normally distributed to lower-ranking masters at arms demonstrating proper usage of the LAEP-90 and LAEP-90C smartguns. A page on how to authenticate the LAEP via a card swipe has been dog-eared, with the word "MANDATORY" having been written at the top."}
+	info = {"An "internal use only" manual normally distributed to lower-ranking security officers demonstrating proper usage of the LAEP-90 and LAEP-90C smartguns. A page on how to authenticate the LAEP via a card swipe has been dog-eared, with the word "MANDATORY" having been written at the top."}
 
 /obj/item/paper/memo/security/batoncqc
 	name = "baton usage in CQC"
@@ -626,32 +590,32 @@
 
 /obj/item/paper/memo/security/goddamnhelmets
 	name = "angry PPE memo"
-	info = {"An "internal use only" note written from a Chief of Security that has grown sick of seeing masters at arms walking around on code green in full personal protective equipment. It concludes with an angry promise to rip off the next gas mask they see. It's been underlined."}
+	info = {"An "internal use only" note written from a Chief of Security that has grown sick of seeing security officers walking around on code green in full personal protective equipment. It concludes with an angry promise to rip off the next gas mask they see. It's been underlined."}
 
 /obj/item/paper/memo/security/burntout
 	name = "proper flash usage"
-	info = {"An "internal use only", hand-written note from a brig chief warning personnel not to overuse their hand flashes in order to prevent the bulb from burning out. They further note that a burnt-out flash is useless. A third party has written on this note that burnt-out flashes should instead be brought to robotics. They even underlined it and added exclamation marks for emphasis, wow."}
+	info = {"An "internal use only", hand-written note from a supervisor warning personnel not to overuse their hand flashes in order to prevent the bulb from burning out. They further note that a burnt-out flash is useless. A third party has written on this note that burnt-out flashes should instead be brought to robotics. They even underlined it and added exclamation marks for emphasis, wow."}
 
 /obj/item/paper/memo/security/lolly
 	name = "\improper STOP STEALING CANDY FROM MED"
-	info = {"Why the fuck do I have to write this to you all when the records say you're all SUPPOSEDLY legal adults? The lollipop jar in medical is for PATIENTS, not MASTERS AT ARMS. Those lollipops contain COLD MEDICINE INSTEAD OF SUGAR. STOP STEALING THEM!!! If you want candy so goddamn much GO TO A VENDING MACHINE. If I see one of you stealing candy from medical, you're being demoted to sanitation tech of maintenance for the rest of your miserable tour here. Clean up and be more professional next shift!"}
+	info = {"Why the fuck do I have to write this to you all when the records say you're all SUPPOSEDLY legal adults? The lollipop jar in medical is for PATIENTS, not SECURITY OFFICERS. Those lollipops contain COLD MEDICINE INSTEAD OF SUGAR. STOP STEALING THEM!!! If you want candy so goddamn much GO TO A VENDING MACHINE. If I see one of you stealing candy from medical, you're being demoted to sanitation tech of maintenance for the rest of your miserable tour here. Clean up and be more professional next shift!"}
 
 /obj/item/paper/memo/security/chaplain
 	name = "inter-department complaint"
-	info = {"An inter-departmental memo from the Chaplain's office detailing their objection at length to the Torch permitting capital punishment within its walls. A diplomatic and scientifically oriented ship should have "no part in warfare"."}
+	info = {"An inter-departmental memo from the Chaplain's office detailing their objection at length to the Torch permitting capital punishment within its walls. A expeditionary and scientifically oriented ship should have "no part in warfare"."}
 
 /obj/item/paper/memo/security/extremism
 	name = "anti-radicalization pamphlet"
-	info = {"An "internal use only" document detailing strategies for identifying signs and risk factors for radicalization, created in light of perceived extremism in the SCGF. It discusses low self-esteem, stress, marginalization, repeat disciplinary issues, and excessive interest in weaponry."}
+	info = {"An "internal use only" document detailing strategies for identifying signs and risk factors for radicalization, created in light of perceived extremism in PMCs. It discusses low self-esteem, stress, marginalization, repeat disciplinary issues, and excessive interest in weaponry."}
 
 /obj/item/paper/memo/security/useofforce
 	name = "use of force complaint"
-	info = {"An inter-departmental memo from the Chief Medical Officer to the Chief of Security and Brig Chief about the amount of detainees treated for injuries "far greater then would be needed" following their detainment. It has a quite graphic description of a crewmember who's legs were broken for simply walking away from a master at arms."}
+	info = {"An inter-departmental memo from the Chief Medical Officer to the Chief of Security and Supervisor about the amount of detainees treated for injuries "far greater then would be needed" following their detainment. It has a quite graphic description of a crewmember who's legs were broken for simply walking away from a security officer."}
 
 /obj/item/paper/memo/security/testing
 	name = "research testing notice"
-	info = {"An inter-departmental memo from the Chief Engineer, co-signed by the Seinor Enlisted Advisor conserning repeated instances of the research department testing explosive devices aboard the vessel. Attached is a copy of the vessel's SOP pertaining to research operations, with in big bold letters "Testing of any explosives with risk of penetrating the hull or causing mass destruction must be done at an away site." with a note that the testing aboard has repeatedly caused damage to the thruster fuel storage tank, and that engineering staff are 'prepared to file as much paperwork that is required'."}
+	info = {"An inter-departmental memo from the Chief Engineer, co-signed by the Bosun conserning repeated instances of the research department testing explosive devices aboard the vessel. Attached is a copy of the vessel's SOP pertaining to research operations, with in big bold letters "Testing of any explosives with risk of penetrating the hull or causing mass destruction must be done at an away site." with a note that the testing aboard has repeatedly caused damage to the thruster fuel storage tank, and that engineering staff are 'prepared to file as much paperwork that is required'."}
 
 /obj/item/paper/memo/security/goodcomms
 	name = "security comm report"
-	info = {"An "internal use only" report created by mid-level EXO Security Officers, complimenting Torch for their effective, direct and information focused radio-communication. The author mentions an abbreviation table from years ago that is no longer used. It ends by gently reminding members that gossiping in person is fine, but not to do it in recorded rooms like interrogation."}
+	info = {"An "internal use only" report created by mid-level NanoTrasen Security Officers, complimenting Torch for their effective, direct and information focused radio-communication. The author mentions an abbreviation table from years ago that is no longer used. It ends by gently reminding members that gossiping in person is fine, but not to do it in recorded rooms like interrogation."}
