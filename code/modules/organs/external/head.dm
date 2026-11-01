@@ -13,6 +13,7 @@
 	amputation_point = "neck"
 	encased = "skull"
 	artery_name = "carotid artery"
+	arterial_bleed_severity = 2
 	cavity_name = "cranial"
 
 	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_GENDERED_ICON | ORGAN_FLAG_HEALS_OVERKILL | ORGAN_FLAG_CAN_BREAK

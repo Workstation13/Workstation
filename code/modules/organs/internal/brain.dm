@@ -12,8 +12,8 @@
 	throw_range = 5
 	origin_tech = list(TECH_BIO = 3)
 	attack_verb = list("attacked", "slapped", "whacked")
-	relative_size = 85
-	damage_reduction = 0
+	relative_size = 40
+	damage_reduction = -2
 	can_be_printed = FALSE
 
 	var/can_use_mmi = TRUE
@@ -157,6 +157,11 @@
 
 			// No heart? You are going to have a very bad time. Not 100% lethal because heart transplants should be a thing.
 			var/blood_volume = owner.get_blood_oxygenation()
+			var/obj/item/organ/external/head/attached_head = owner.get_organ(parent_organ)
+			if (!attached_head)
+				return
+			if (attached_head.status & ORGAN_ARTERY_CUT) //carotid severed, blood is not reaching the brain
+				blood_volume = 0
 			if(blood_volume < BLOOD_VOLUME_SURVIVE)
 				if(!owner.chem_effects[CE_STABLE] || prob(60))
 					oxygen_reserve = max(0, oxygen_reserve-1)
@@ -211,18 +216,17 @@
 		if (owner)
 			owner.flash_eyes()
 			owner.eye_blurry += damage_secondary
-			owner.mod_confused(damage_secondary * 2)
 			owner.Paralyse(damage_secondary)
 			owner.Weaken(round(damageTaken, 1))
 			if (prob(30))
 				addtimer(new Callback(src, PROC_REF(brain_damage_callback), damage), rand(6, 20) SECONDS, TIMER_UNIQUE)
 
-/obj/item/organ/internal/brain/proc/brain_damage_callback(damage) //Confuse them as a somewhat uncommon aftershock. Side note: Only here so a spawn isn't used. Also, for the sake of a unique timer.
+/obj/item/organ/internal/brain/proc/brain_damage_callback(damage) //Blind them as a somewhat uncommon aftershock. Side note: Only here so a spawn isn't used. Also, for the sake of a unique timer.
 	if (!owner || owner.is_real_dead() || (status & ORGAN_DEAD))
 		return
 
-	to_chat(owner, SPAN_NOTICE(SPAN_STYLE("font-size: 10", "<B>I can't remember which way is forward...</B>")))
-	owner.mod_confused(damage)
+	to_chat(owner, SPAN_NOTICE(SPAN_STYLE("font-size: 10", "<B>I can't see...</B>")))
+	owner.eye_blurry += damage
 
 /obj/item/organ/internal/brain/proc/handle_disabilities()
 	if(owner.stat)

@@ -71,6 +71,12 @@
 	poison_types = species.poison_types ? species.poison_types : list(GAS_PHORON = TRUE)
 	exhale_type = species.exhale_type ? species.exhale_type : GAS_CO2
 
+/obj/item/organ/internal/lungs/proc/neck_check() //returns true if there's damage to the neck preventing breathing
+	var/throat_slit = TRUE
+	for (var/obj/item/organ/external/head/neck in owner.organs) //dirty but saves defining a trachea organ
+		throat_slit = neck.status & ORGAN_ARTERY_CUT
+	return throat_slit
+
 /obj/item/organ/internal/lungs/Process()
 	..()
 	if(!owner)
@@ -80,32 +86,43 @@
 		if(prob(5))
 			owner.emote("cough")		//respitory tract infection
 
-	if(is_bruised() && !owner.is_asystole() && !(mnoBreath in owner.mutations))
-		if(prob(2))
-			if(active_breathing)
-				owner.visible_message(
-					"<B>\The [owner]</B> coughs up blood!",
-					SPAN_WARNING("You cough up blood!"),
-					"You hear someone coughing!",
-				)
-			else
-				var/obj/item/organ/parent = owner.get_organ(parent_organ)
-				owner.visible_message(
-					"blood drips from <B>\the [owner]'s</B> [parent.name]!",
-				)
+	if(!owner.is_asystole() && !(mnoBreath in owner.mutations))
+		if (is_bruised())
+			if(prob(2))
+				if(active_breathing)
+					owner.visible_message(
+						"<B>\The [owner]</B> coughs up blood!",
+						SPAN_WARNING("You cough up blood!"),
+						"You hear someone coughing!",
+					)
+				else
+					var/obj/item/organ/parent = owner.get_organ(parent_organ)
+					owner.visible_message(
+						"blood drips from <B>\the [owner]'s</B> [parent.name]!",
+					)
 
-			owner.drip(1)
-		if(prob(4))
-			if(active_breathing)
-				owner.visible_message(
-					"<B>\The [owner]</B> gasps for air!",
-					SPAN_DANGER("You can't breathe!"),
-					"You hear someone gasp for air!",
-				)
-			else
-				to_chat(owner, SPAN_DANGER("You're having trouble getting enough [breath_type]!"))
+				owner.drip(1)
+			if(prob(4))
+				if(active_breathing)
+					owner.visible_message(
+						"<B>\The [owner]</B> gasps for air!",
+						SPAN_DANGER("You can't breathe!"),
+						"You hear someone gasp for air!",
+					)
+				else
+					to_chat(owner, SPAN_DANGER("You're having trouble getting enough [breath_type]!"))
 
-			owner.losebreath = max(round(damage / 2), owner.losebreath)
+				owner.losebreath = max(round(damage / 2), owner.losebreath)
+
+		if (neck_check())
+			if (prob(4))
+				if (active_breathing)
+					owner.visible_message(
+						"<B>\The [owner]</B> splutters and chokes!",
+						SPAN_DANGER("You can't breathe!"),
+						"You hear wet spluttering!",
+					)
+			owner.losebreath = max(min_broken_damage, owner.losebreath)
 
 /obj/item/organ/internal/lungs/proc/rupture()
 	var/obj/item/organ/external/parent = owner.get_organ(parent_organ)
@@ -132,7 +149,7 @@
 	if(!owner)
 		return 1
 
-	if(!breath || (max_damage <= 0))
+	if(!breath || (max_damage <= 0) || neck_check())
 		breath_fail_ratio = 1
 		handle_failed_breath()
 		return 1

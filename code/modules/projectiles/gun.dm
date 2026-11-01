@@ -561,7 +561,7 @@
 				M.apply_damage(in_chamber.damage * 2, in_chamber.damage_type, brain.parent_organ, in_chamber.damage_flags(), used_weapon = "Point blank shot in the mouth with \a [in_chamber]")
 				var/dmgmultiplier
 				if (prob (95))
-					dmgmultiplier = rand(30, 50) / 10
+					dmgmultiplier = rand(20, 30) / 10
 				else
 					dmgmultiplier = 0.5
 				if (blocked)

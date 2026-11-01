@@ -273,18 +273,17 @@
 		if(armor_datum)
 			damage_mod -= armor_datum.get_blocked(DAMAGE_BRUTE, damage_flags, W.armor_penetration, W.force*1.5)
 
-	var/total_damage = 0
-	for(var/i in 1 to 3)
-		var/damage = min(W.force*2.5, 30)*damage_mod
-		affecting.apply_damage(damage, W.damtype, BP_HEAD, damage_flags, armor_pen = 100, used_weapon=W)
-		total_damage += damage
+	var/damage = min(W.force*2.5, 30)*damage_mod
+	affecting.apply_damage(damage, W.damtype, BP_HEAD, damage_flags, armor_pen = 100, used_weapon=W)
+	var/obj/item/organ/external/O = affecting.get_organ(BP_HEAD)
+	if(!O || O.is_stump() || (O.status & ORGAN_ARTERY_CUT))
+		return FALSE
+	if(!O || O.is_stump() || !O.sever_artery())
+		return 0
+	user.visible_message(SPAN_DANGER("\The [user] slit \the [affecting]'s throat open with \the [W]!"))
 
-
-	if(total_damage)
-		user.visible_message(SPAN_DANGER("\The [user] slit \the [affecting]'s throat open with \the [W]!"))
-
-		if(W.hitsound)
-			playsound(affecting.loc, W.hitsound, 50, 1, -1)
+	if(W.hitsound)
+		playsound(affecting.loc, W.hitsound, 50, 1, -1)
 
 	G.last_action = world.time
 
