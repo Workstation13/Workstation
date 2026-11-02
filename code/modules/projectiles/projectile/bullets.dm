@@ -10,6 +10,7 @@
 	space_knockback = 1
 	var/mob_passthrough_check = 0
 	var/is_pellet = FALSE
+	hitscan = TRUE
 
 	muzzle_type = /obj/projectile/bullet
 	miss_sounds = list('sound/weapons/guns/miss1.ogg','sound/weapons/guns/miss2.ogg','sound/weapons/guns/miss3.ogg','sound/weapons/guns/miss4.ogg')
