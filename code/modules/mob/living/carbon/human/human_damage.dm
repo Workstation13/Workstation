@@ -461,3 +461,23 @@ This function restores all organs.
 	if(stat == UNCONSCIOUS)
 		traumatic_shock *= 0.6
 	return max(0,traumatic_shock)
+
+/mob/living/carbon/human/get_thickness(obj/item/organ/external/def_zone)
+	if(!def_zone)
+		def_zone = ran_zone()
+	if(!istype(def_zone))
+		def_zone = get_organ(src, def_zone)
+	if(!def_zone)
+		return ..()
+
+	. = list()
+	for(var/slot in slot_first to slot_last)
+		var/obj/item/clothing/gear = get_equipped_item(slot)
+		if(!istype(gear))
+			continue
+		if(length(gear.accessories))
+			for(var/obj/item/clothing/accessory in gear.accessories)
+				if(accessory.body_parts_covered & def_zone.body_part)
+					. *= accessory.agony_mod
+		if(gear.body_parts_covered & def_zone.body_part)
+			. *= gear.armor

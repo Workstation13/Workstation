@@ -101,6 +101,7 @@
 	item_flags = null
 	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0
+	agony_mod = 0.5
 
 /obj/item/clothing/suit/bomb_suit/Initialize()
 	. = ..()

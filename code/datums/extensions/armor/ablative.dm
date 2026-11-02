@@ -11,13 +11,13 @@
 		armor_degradation_coef = _armor_degradation_speed
 
 /datum/extension/armor/ablative/on_blocking(damage, damage_type, damage_flags, armor_pen, blocked)
-	if (!(damage_type == DAMAGE_BRUTE || damage_type == DAMAGE_BURN))
+	if(!(damage_type == DAMAGE_BRUTE || damage_type == DAMAGE_BURN))
 		return
 	if(armor_degradation_coef)
 		var/key = get_armor_key(damage_type, damage_flags)
 		var/damage_blocked = round(damage * blocked)
 		if(damage_blocked)
-			var/new_armor = max(0, get_value(key) - armor_degradation_coef * damage_blocked)
+			var/new_armor = max(0, get_value(key) - armor_degradation_coef * (damage_blocked + armor_pen))
 			set_value(key, new_armor)
 			var/mob/M = get_holder_of_type(holder, /mob)
 			if(istype(M))
@@ -41,11 +41,21 @@
 	for(var/key in damages)
 		switch(round(100 * damages[key]/max_armor_values[key]))
 			if(5 to 10)
-				result[key] = "minor"
+				result[key] = "trivial"
 			if(11 to 25)
-				result[key] = "moderate"
+				result[key] = "minor"
 			if(26 to 50)
-				result[key] = "serious"
-			if(51 to 100)
+				result[key] = "moderate"
+			if(51 to 99)
+				result[key] = "severe"
+			if(100)
 				result[key] = "catastrophic"
 	return result
+
+/datum/extension/armor/ablative/rig
+	var/sealed = FALSE
+
+/datum/extension/armor/ablative/rig/get_value(key)
+	if(key == "bio" && sealed)
+		return 100
+	return ..()

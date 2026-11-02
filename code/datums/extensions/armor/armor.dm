@@ -56,9 +56,18 @@
 	if(!key)
 		return 0
 
-	var/armor = max(0, get_value(key) - armor_pen)
+	var/armor = get_value(key) - armor_pen
+	if (damage_flags & (DAMAGE_FLAG_SHARP | DAMAGE_FLAG_LASER))
+		if (armor < 0)
+			return 0
+		if (armor > 0)
+			return 0.98
+		else
+			return 0.5
+	armor = max(0, armor)
 	if(!armor)
 		return 0
+
 	var/efficiency = min(damage / (armor_range_mult * armor), 1)
 	var/coef = damage <= armor ? under_armor_mult : over_armor_mult
 	return max(1 - coef * efficiency, 0)

@@ -13,6 +13,9 @@
 		)
 	slot = ACCESSORY_SLOT_ARMOR_CHEST
 	flags_inv = CLOTHING_BULKY
+	armor_degradation_speed = 0.3
+	agony_mod = 1
+	armor_type = /datum/extension/armor/ablative
 
 
 /obj/item/clothing/accessory/armor_plate/medium

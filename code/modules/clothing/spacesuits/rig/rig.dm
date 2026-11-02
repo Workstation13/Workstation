@@ -15,7 +15,7 @@
 	w_class = ITEM_SIZE_HUGE
 
 	// These values are passed on to all component pieces.
-	armor_type = /datum/extension/armor/rig
+	armor_type = /datum/extension/armor/ablative/rig
 	armor = list(
 		melee = ARMOR_MELEE_RESISTANT,
 		bullet = ARMOR_BALLISTIC_MINOR,

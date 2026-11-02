@@ -110,6 +110,7 @@
 		)
 	siemens_coefficient = 0.7
 	action_button_name = "Toggle Visor"
+	agony_mod = 0.5
 
 /obj/item/clothing/head/helmet/riot/attack_self(mob/user)
 	body_parts_covered ^= EYES|FACE

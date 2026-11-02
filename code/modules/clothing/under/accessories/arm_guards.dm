@@ -98,6 +98,7 @@
 		bomb = ARMOR_BOMB_PADDED
 	)
 	siemens_coefficient = 0.5
+	agony_mod = 0.5
 
 
 /obj/item/clothing/accessory/arm_guards/ballistic

@@ -293,6 +293,7 @@
 		)
 	slowdown_general = 0.4
 	siemens_coefficient = 1.3 // This /is/ a pair of exposed metal sheets and cable coil.
+	armor_degradation_speed = 0.2
 
 //Modular plate carriers
 /obj/item/clothing/suit/armor/pcarrier
@@ -379,6 +380,7 @@
 	slowdown_general = 0.5
 	siemens_coefficient = 0.5
 	accessories = list(/obj/item/clothing/accessory/arm_guards/riot, /obj/item/clothing/accessory/leg_guards/riot)
+	agony_mod = 0.5
 
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_modular_armor_unathi.dmi'
@@ -403,6 +405,7 @@
 	flags_inv = CLOTHING_BULKY
 	slowdown_general = 0.5
 	siemens_coefficient = 0.7
+	agony_mod = 0.75
 	accessories = list(/obj/item/clothing/accessory/arm_guards/ballistic, /obj/item/clothing/accessory/leg_guards/ballistic)
 
 	sprite_sheets = list(

@@ -35,6 +35,9 @@
 	var/toggle_on_message
 	var/toggle_off_message
 	var/off_state = null
+	var/agony_mod = 0.9
+	armor_degradation_speed = 0.1
+	armor_type = /datum/extension/armor/ablative
 
 	/// if this item covers the feet, the footprints it should leave
 	var/move_trail = /obj/decal/cleanable/blood/tracks/footprints
@@ -202,8 +205,8 @@
 
 /obj/item/clothing/examine(mob/user)
 	. = ..()
-	var/datum/extension/armor/ablative/armor_datum = get_extension(src, /datum/extension/armor/ablative)
-	if(istype(armor_datum) && LAZYLEN(armor_datum.get_visible_damage()))
+	var/datum/extension/armor/ablative/armor_datum = get_extension(src, /datum/extension/armor)
+	if(istype(armor_datum) && length(armor_datum.get_visible_damage()))
 		to_chat(user, SPAN_WARNING("It has some <a href='byond://?src=\ref[src];list_armor_damage=1'>damage</a>."))
 
 /obj/item/clothing/CanUseTopic(user)
@@ -223,7 +226,7 @@
 			to_chat(user, "Attached to \the [src] are [english_list(display)].")
 		return TOPIC_HANDLED
 	if(href_list["list_armor_damage"])
-		var/datum/extension/armor/ablative/armor_datum = get_extension(src, /datum/extension/armor/ablative)
+		var/datum/extension/armor/ablative/armor_datum = get_extension(src, /datum/extension/armor)
 		var/list/damages = armor_datum.get_visible_damage()
 		to_chat(user, "\The [src] [icon2html(src, user)] has some damage:")
 		for(var/key in damages)
