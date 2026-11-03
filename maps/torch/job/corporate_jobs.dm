@@ -15,7 +15,7 @@
 		"Corporate Executive"
 		)
 	outfit_type = /singleton/hierarchy/outfit/job/torch/passenger/workplace_liaison
-	allowed_branches = list(/datum/mil_branch/nt/)
+	allowed_branches = list(/datum/mil_branch/nt)
 	allowed_ranks = list(/datum/mil_rank/nt/liaison)
 	skill_points = 26
 	min_skill = list( // 5 points
