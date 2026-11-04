@@ -104,7 +104,7 @@
 	id = GAS_HYDROGEN
 	name = "Hydrogen"
 	specific_heat = 100	// J/(mol*K)
-	molar_mass = 0.002	// kg/mol
+	molar_mass = 0.001	// kg/mol
 	flags = XGM_GAS_FUEL|XGM_GAS_FUSION_FUEL
 	burn_product = GAS_STEAM
 	symbol_html = "H<sub>2</sub>"
@@ -114,14 +114,14 @@
 	id = GAS_DEUTERIUM
 	name = "Deuterium"
 	specific_heat = 80
-	molar_mass = 0.004
+	molar_mass = 0.002
 	symbol_html = "D"
 	symbol = "D"
 
 /singleton/xgm_gas/hydrogen/tritium
 	id = GAS_TRITIUM
 	name = "Tritium"
-	molar_mass = 0.006
+	molar_mass = 0.003
 	specific_heat = 60
 	symbol_html = "T"
 	symbol = "T"
