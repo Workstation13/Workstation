@@ -128,17 +128,27 @@
 /obj/item/projectile/bullet/pistol
 	damage = 45
 	distance_falloff = 3
+	subsonic = TRUE
 
 /obj/item/projectile/bullet/pistol/holdout
 	damage = 40
 	penetration_modifier = 1.2
 	distance_falloff = 4
 
+/obj/item/projectile/bullet/pistol/holdout/ap
+	damage = 40
+	penetration_modifier = 2
+	penetrating = 1
+	armor_penetration = 25
+	distance_falloff = 2
+	subsonic = FALSE
+
 /obj/item/projectile/bullet/pistol/strong
 	damage = 50
 	penetration_modifier = 0.8
 	distance_falloff = 2.5
 	armor_penetration = 15
+	subsonic = FALSE
 
 /obj/item/projectile/bullet/pistol/rubber //"rubber" bullets
 	name = "rubber bullet"
@@ -163,8 +173,7 @@
 
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
-	damage = 65
-	armor_penetration = 10
+	damage = 80
 
 /obj/item/projectile/bullet/shotgun/beanbag		//because beanbags are not bullets
 	name = "beanbag"
@@ -200,13 +209,13 @@
 /* "Rifle" rounds */
 
 /obj/item/projectile/bullet/rifle
-	damage = 45
+	damage = 50
 	armor_penetration = 25
 	penetrating = 1
 	distance_falloff = 1
 
 /obj/item/projectile/bullet/rifle/military
-	damage = 40
+	damage = 60
 	armor_penetration = 35
 
 /obj/item/projectile/bullet/rifle/shell

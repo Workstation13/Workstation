@@ -9,7 +9,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/pistol/double
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2, TECH_ESOTERIC = 4)
 	ammo_indicator = TRUE
-	fire_delay = 8
+	fire_delay = 4
 
 
 /obj/item/gun/projectile/pistol/bobcat
@@ -27,7 +27,7 @@
 		/obj/item/ammo_magazine/pistol/small
 	)
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_ESOTERIC = 4)
-	fire_delay = 4
+	fire_delay = 3
 
 // AUTOSHOTGUN
 
@@ -93,7 +93,7 @@
 	icon = 'packs/factions/iccgn/weapons.dmi'
 	icon_state = "dmr"
 	item_state = "dmr"
-	fire_delay = 8
+	fire_delay = 4
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_ESOTERIC = 5)
 	w_class = ITEM_SIZE_HUGE
 	force = 10
@@ -119,6 +119,10 @@
 	else
 		icon_state = "dmr-empty"
 	..()
+
+/obj/item/gun/projectile/sniper/panther/empty
+	starts_loaded = FALSE
+
 
 // SUBMACHINE GUN
 
@@ -147,8 +151,8 @@
 	w_class = ITEM_SIZE_SMALL
 
 	firemodes = list(
-		list(mode_name="semi auto",       burst=1, fire_delay=null,    move_delay=null, one_hand_penalty=0, burst_accuracy=null, dispersion=null),
-		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=3,    one_hand_penalty=0.5, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.4, 0.8)),
+		list(mode_name="semi auto",       burst=1, fire_delay=3,    move_delay=null, one_hand_penalty=0, burst_accuracy=null, dispersion=null),
+		list(mode_name="2-round bursts", burst=2, fire_delay=3, move_delay=3,    one_hand_penalty=0.5, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.4, 0.8)),
 		)
 
 

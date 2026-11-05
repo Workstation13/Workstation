@@ -8,7 +8,7 @@
 	item_state = "secgundark"
 	safety_icon = "m22f-safety"
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
-	fire_delay = 7
+	fire_delay = 4
 	ammo_indicator = TRUE
 
 /obj/item/gun/projectile/pistol/m22f/empty
@@ -28,7 +28,7 @@
 	item_state = "secgundark"
 	safety_icon = "m19-safety"
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3)
-	fire_delay = 5
+	fire_delay = 3
 
 /obj/item/gun/projectile/pistol/m19/empty
 	starts_loaded = FALSE

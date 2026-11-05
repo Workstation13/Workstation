@@ -128,7 +128,7 @@
 	projectile_type = /obj/item/projectile/beam/xray
 	one_hand_penalty = 1
 	w_class = ITEM_SIZE_NORMAL
-	fire_delay = 10
+	fire_delay = 5
 
 /obj/item/gun/energy/sniperrifle
 	name = "marksman energy rifle"

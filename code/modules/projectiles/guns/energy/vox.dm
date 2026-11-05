@@ -79,7 +79,7 @@
 	one_hand_penalty = 1
 	self_recharge = 1
 	recharge_time = 10
-	fire_delay = 15
+	fire_delay = 10
 	projectile_type = /obj/item/projectile/energy/plasmastun/sonic/weak
 	firemodes = list(
 		list(

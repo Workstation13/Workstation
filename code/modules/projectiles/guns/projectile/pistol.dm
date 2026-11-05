@@ -32,7 +32,7 @@
 	safety_icon = "safety"
 	magazine_type = /obj/item/ammo_magazine/pistol/rubber
 	accuracy = -1
-	fire_delay = 6
+	fire_delay = 4
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 
 /obj/item/gun/projectile/pistol/sec/empty
@@ -50,7 +50,7 @@
 	safety_icon = "safety"
 	force = 9
 	caliber = CALIBER_PISTOL_MAGNUM
-	fire_delay = 12
+	fire_delay = 6
 	screen_shake = 2
 	magazine_type = /obj/item/ammo_magazine/magnum
 	allowed_magazines = /obj/item/ammo_magazine/magnum
@@ -68,9 +68,9 @@
 	icon = 'icons/obj/guns/pistol_throwback.dmi'
 	icon_state = "pistol1"
 	magazine_type = /obj/item/ammo_magazine/pistol/throwback
-	accuracy_power = 5
+	accuracy_power = 3
 	one_hand_penalty = 2
-	fire_delay = 7
+	fire_delay = 4
 	caliber = CALIBER_PISTOL_ANTIQUE
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	var/base_icon = "pistol1"
@@ -98,7 +98,7 @@
 	magazine_type = /obj/item/ammo_magazine/gyrojet
 	allowed_magazines = /obj/item/ammo_magazine/gyrojet
 	handle_casings = CLEAR_CASINGS	//the projectile is the casing
-	fire_delay = 25
+	fire_delay = 12
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 	mag_insert_sound = 'sound/weapons/guns/interaction/hpistol_magin.ogg'
@@ -120,7 +120,7 @@
 	item_state = "pistol"
 	w_class = ITEM_SIZE_SMALL
 	caliber = CALIBER_PISTOL_SMALL
-	fire_delay = 4
+	fire_delay = 3
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ESOTERIC = 2)
 	magazine_type = /obj/item/ammo_magazine/pistol/small
 	allowed_magazines = /obj/item/ammo_magazine/pistol/small
@@ -129,7 +129,7 @@
 
 /obj/item/gun/projectile/pistol/holdout/on_update_icon()
 	..()
-	if (silencer)
+	if (attached_silencer)
 		item_state = "[initial(item_state)]-silencer"
 	else
 		item_state = initial(item_state)
@@ -141,7 +141,6 @@
 	icon_state = "silencer"
 	w_class = ITEM_SIZE_SMALL
 	var/caliber = CALIBER_PISTOL_SMALL
-	var/silenced_sound = 'sound/weapons/gunshot/gunshot_suppressed.ogg'
 
 /obj/item/gun/projectile/pistol/broomstick
 	name = "broomstick"
@@ -150,7 +149,7 @@
 	icon_state = "broomstick"
 	accuracy_power = 6
 	one_hand_penalty = 3
-	fire_delay = 5
+	fire_delay = 2
 	caliber = CALIBER_PISTOL_SMALL
 	origin_tech = list(
 						TECH_COMBAT = 2,
@@ -187,4 +186,4 @@
 	safety_icon = "grosser-safety"
 	magazine_type = /obj/item/ammo_magazine/pistol/double
 	allowed_magazines = /obj/item/ammo_magazine/pistol/double
-	fire_delay = 7
+	fire_delay = 4

@@ -10371,10 +10371,10 @@
 	dir = 1
 	},
 /obj/structure/table/steel,
-/obj/item/reagent_containers/food/snacks/toastedsandwich{
-	desc = "Discontinued after a slew of food poisoning related incidents following a failed attempt at using th'oom cheese, the beloved MRE Menu 9 grilled cheese is a well-sought after trophy for spacers and members of the Defense Forces alike.";
-	name = "special toasted sandwich"
-	},
+/obj/item/silencer,
+/obj/item/silencer,
+/obj/item/silencer,
+/obj/item/silencer,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "aKw" = (
@@ -18429,20 +18429,14 @@
 "htK" = (
 /obj/structure/table/rack,
 /obj/floor_decal/industrial/outline/grey,
-/obj/item/storage/box/ammo/light_bullpup,
-/obj/item/storage/box/ammo/light_bullpup,
-/obj/item/gun/projectile/automatic/bullpup_rifle/light{
-	starts_loaded = 0
-	},
-/obj/item/gun/projectile/automatic/bullpup_rifle/light{
-	starts_loaded = 0
-	},
-/obj/item/gun/projectile/automatic/bullpup_rifle/light{
-	starts_loaded = 0
-	},
-/obj/item/gun/projectile/automatic/bullpup_rifle/light{
-	starts_loaded = 0
-	},
+/obj/item/storage/box/ammo/smg/ap,
+/obj/item/storage/box/ammo/smg/ap,
+/obj/item/storage/box/ammo/assault,
+/obj/item/gun/projectile/automatic/sec_smg/empty,
+/obj/item/gun/projectile/automatic/sec_smg/empty,
+/obj/item/gun/projectile/automatic/sec_smg/empty,
+/obj/item/gun/projectile/automatic/sec_smg/empty,
+/obj/item/gun/projectile/sniper/panther/empty,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "hub" = (
@@ -26809,8 +26803,9 @@
 "rEK" = (
 /obj/structure/table/rack,
 /obj/floor_decal/industrial/outline/grey,
-/obj/item/storage/box/ammo/stunshells,
-/obj/item/storage/box/ammo/stunshells,
+/obj/item/storage/box/ammo/shotgunshells,
+/obj/item/storage/box/ammo/shotgunshells,
+/obj/item/storage/box/ammo/shotgunshells,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
 "rFb" = (

@@ -40,7 +40,7 @@
 	var/is_jammed = 0           //Whether this gun is jammed
 	var/jam_chance = 0          //Chance it jams on fire
 	var/barrel_thread = FALSE // Whether the gun can mount a suppressor
-	var/obj/item/silencer/silencer //the silencer attached to the gun
+	var/obj/item/silencer/attached_silencer //the silencer attached to the gun
 	var/silencer_offset = 0 //just in case you need to offset the sprite for the silencer
 	//TODO generalize ammo icon states for guns
 	//var/magazine_states = 0
@@ -49,7 +49,7 @@
 
 /obj/item/gun/projectile/Initialize()
 	. = ..()
-	if (silencer)
+	if (attached_silencer)
 		verbs += /obj/item/gun/projectile/proc/silencer
 
 	if (starts_loaded)
@@ -62,7 +62,7 @@
 
 /obj/item/gun/projectile/on_update_icon()
 	. = ..()
-	if (silencer)
+	if (attached_silencer)
 		AddOverlays(image(icon, "[initial(icon_state)]-silencer", pixel_x = silencer_offset))
 
 /obj/item/gun/projectile/consume_next_projectile()
@@ -90,6 +90,10 @@
 			ammo_magazine.stored_ammo -= chambered
 
 	if (chambered)
+		if (chambered.BB.subsonic && attached_silencer)
+			silenced = TRUE
+		else
+			silenced = FALSE
 		return chambered.BB
 	return null
 
@@ -327,8 +331,8 @@
 	// Silencer - Attach silencer
 	if (istype(tool, /obj/item/silencer) && barrel_thread)
 		if (silenced)
-			if (silencer)
-				USE_FEEDBACK_FAILURE("\The [src] already has \a [silencer] attached.")
+			if (attached_silencer)
+				USE_FEEDBACK_FAILURE("\The [src] already has \a [attached_silencer] attached.")
 			else
 				USE_FEEDBACK_FAILURE("\The [src] is already silenced.")
 			return TRUE
@@ -337,20 +341,18 @@
 			return TRUE
 		var/obj/item/silencer/new_silencer = tool
 		if (new_silencer.caliber == src.caliber)
-			silenced = TRUE
-			silencer = tool
+			attached_silencer = new_silencer
 			w_class += 1
 			update_icon()
 			user.visible_message(
-				SPAN_NOTICE("\The [user] screws \a [tool] onto \a [src]."),
-				SPAN_NOTICE("You screw \a [tool] onto \a [src]."),
+				SPAN_NOTICE("\The [user] screws \a [new_silencer] onto \a [src]."),
+				SPAN_NOTICE("You screw \a [new_silencer] onto \a [src]."),
 				range = 2
 			)
-			fire_sound = new_silencer.silenced_sound
 			verbs += /obj/item/gun/projectile/proc/silencer
 			return TRUE
 		else
-			USE_FEEDBACK_FAILURE("\The [src] and \the [tool] are not in the same caliber.")
+			USE_FEEDBACK_FAILURE("\The [src] and \the [new_silencer] are not in the same caliber.")
 			return TRUE
 
 	return ..()
@@ -435,7 +437,7 @@
 /obj/item/gun/projectile/proc/removeSilencer(mob/user)
 	if (!user.use_sanity_check(src))
 		return
-	if (!silencer)
+	if (!attached_silencer)
 		to_chat(user, SPAN_WARNING("There is no silencer attached to \the [src]!"))
 		return
 	if (!user.IsHolding(src))
@@ -444,9 +446,9 @@
 	if (!user.HasFreeHand())
 		to_chat(user, SPAN_WARNING("You need a free hand to remove \the [src]'s silencer!"))
 		return
-	to_chat(user, SPAN_NOTICE("You unscrew \the [silencer] from \the [src]."))
-	user.put_in_hands(silencer)
-	silencer = null
+	to_chat(user, SPAN_NOTICE("You unscrew \the [attached_silencer] from \the [src]."))
+	user.put_in_hands(attached_silencer)
+	attached_silencer = null
 	w_class -= 1
 	silenced = FALSE
 	fire_sound = initial(fire_sound)

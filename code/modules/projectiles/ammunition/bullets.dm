@@ -31,6 +31,10 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber/holdout
 	icon_state = "smallcasing_r"
 
+/obj/item/ammo_casing/pistol/small/ap
+	label = "armour piercing"
+	projectile_type = /obj/item/projectile/bullet/pistol/holdout/ap
+
 /obj/item/ammo_casing/pistol/small/practice
 	desc = "A small pistol practice bullet casing."
 	label = "practice"

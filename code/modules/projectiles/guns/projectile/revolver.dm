@@ -8,7 +8,7 @@
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	handle_casings = CYCLE_CASINGS
 	max_shells = 6
-	fire_delay = 12 //Revolvers are naturally slower-firing
+	fire_delay = 8 //Revolvers are naturally slower-firing
 	ammo_type = /obj/item/ammo_casing/pistol/magnum
 	mag_insert_sound = 'sound/weapons/guns/interaction/rev_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/rev_magout.ogg'
@@ -71,7 +71,7 @@
 	accuracy = 1
 	one_hand_penalty = 0
 	bulk = 0
-	fire_delay = 7
+	fire_delay = 6 //hammerless revolver
 
 /obj/item/gun/projectile/revolver/capgun
 	name = "cap gun"

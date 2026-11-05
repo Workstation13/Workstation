@@ -258,6 +258,10 @@
 	name = "box of SMG magazines - rubber"
 	startswith = list(/obj/item/ammo_magazine/smg_top/rubber = 7)
 
+/obj/item/storage/box/ammo/smg/ap
+	name = "box of SMG magazines - armour piercing"
+	startswith = list(/obj/item/ammo_magazine/smg_top/ap = 7)
+
 /obj/item/storage/box/ammo/heavy_bullpup
 	name = "box of heavy bullpup magazines"
 	startswith = list(/obj/item/ammo_magazine/mil_rifle = 6)
@@ -265,6 +269,10 @@
 /obj/item/storage/box/ammo/light_bullpup
 	name = "box of light bullpup magazines"
 	startswith = list(/obj/item/ammo_magazine/mil_rifle/light = 6)
+
+/obj/item/storage/box/ammo/assault
+	name = "box of assault rifle magazines"
+	startswith = list(/obj/item/ammo_magazine/rifle = 6)
 
 
 /obj/item/storage/box/flashbangs
