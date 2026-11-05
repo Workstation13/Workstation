@@ -31,10 +31,8 @@
 /singleton/hierarchy/supply_pack/security/pistol
 	name = "Weapons - Ballistic sidearms"
 	contains = list(
-		/obj/item/gun/projectile/pistol/m22f/empty = 2,
-		/obj/item/gun/projectile/pistol/m19/empty = 2,
-		/obj/item/storage/box/ammo/doublestack,
-		/obj/item/storage/box/ammo/pistol
+		/obj/item/gun/projectile/pistol/pdw/empty = 4,
+		/obj/item/storage/box/ammo/small/double = 2
 	)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/weapon

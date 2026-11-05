@@ -97,7 +97,7 @@
 	return list(
 		/obj/item/clothing/accessory/storage/holster/thigh = 3,
 		/obj/item/gun/projectile/pistol/m19/empty = 3,
-		/obj/item/storage/box/ammo/pistol = 2
+		/obj/item/storage/box/ammo/small/double = 2
 	)
 
 /obj/structure/closet/secure_closet/guncabinet/PPE
@@ -107,7 +107,7 @@
 /obj/structure/closet/secure_closet/guncabinet/PPE/WillContain()
 	return list(
 		/obj/item/gun/projectile/pistol/m19/empty = 3,
-		/obj/item/storage/box/ammo/pistol = 2,
+		/obj/item/storage/box/ammo/small/double = 2,
 		/obj/item/clothing/suit/armor/pcarrier/medium/command = 3,
 		/obj/item/clothing/head/helmet/solgov/command = 3,
 		/obj/item/clothing/accessory/storage/holster/thigh = 3

@@ -297,7 +297,8 @@
 				return 1
 
 		else if(agony_amount > 0.5 * max_damage)
-			owner.visible_message(SPAN_WARNING("[owner] reels in pain!"))
+			if (owner.stat == CONSCIOUS)
+				owner.visible_message(SPAN_WARNING("[owner] reels in pain!"))
 			if(agony_amount > max_damage)
 				owner.Weaken(4)
 			else

@@ -10371,10 +10371,10 @@
 	dir = 1
 	},
 /obj/structure/table/steel,
-/obj/item/reagent_containers/food/snacks/toastedsandwich{
-	desc = "Discontinued after a slew of food poisoning related incidents following a failed attempt at using th'oom cheese, the beloved MRE Menu 9 grilled cheese is a well-sought after trophy for spacers and members of the Defense Forces alike.";
-	name = "special toasted sandwich"
-	},
+/obj/item/silencer,
+/obj/item/silencer,
+/obj/item/silencer,
+/obj/item/silencer,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "aKw" = (
@@ -10394,6 +10394,8 @@
 	},
 /obj/floor_decal/industrial/outline/grey,
 /obj/structure/table/steel,
+/obj/item/storage/box/armor/medium,
+/obj/item/storage/box/armor/medium,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "aKA" = (
@@ -10563,6 +10565,10 @@
 /obj/machinery/light,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/structure/sign/warning/secure_area/armory{
+	dir = 1;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
@@ -10823,7 +10829,7 @@
 /obj/item/gun/energy/laser/xenofauna,
 /obj/item/gun/energy/laser/xenofauna,
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "aMD" = (
 /obj/floor_decal/corner/red/three_quarters,
 /obj/item/device/radio/intercom/department/security{
@@ -11309,7 +11315,7 @@
 	},
 /obj/floor_decal/techfloor,
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "aOF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -11322,13 +11328,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "aOG" = (
 /obj/structure/table/rack,
 /obj/item/clothing/accessory/arm_guards/ablative,
@@ -11347,7 +11348,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "aOI" = (
 /obj/structure/hygiene/sink{
 	dir = 8;
@@ -11451,7 +11452,7 @@
 /obj/item/shield/riot,
 /obj/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "aPv" = (
 /obj/structure/hygiene/toilet{
 	dir = 4
@@ -14473,6 +14474,8 @@
 /obj/item/device/flash,
 /obj/item/device/flash,
 /obj/floor_decal/industrial/outline/grey,
+/obj/item/storage/box/armor/merc,
+/obj/item/storage/box/armor/merc,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "bDb" = (
@@ -14555,7 +14558,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "bGZ" = (
 /obj/floor_decal/sign/or1,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -16088,16 +16091,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/foyer/storeroom)
-"dIw" = (
-/obj/structure/sign/warning/secure_area/armory{
-	dir = 1;
-	pixel_y = -32
-	},
-/obj/floor_decal/techfloor{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
 "dIA" = (
 /obj/structure/railing/mapped{
 	dir = 4;
@@ -16822,13 +16815,8 @@
 	dir = 1
 	},
 /obj/floor_decal/techfloor,
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "eIb" = (
 /obj/structure/curtain/open/shower,
 /obj/structure/hygiene/shower{
@@ -16929,7 +16917,7 @@
 /obj/item/clothing/head/helmet/ballistic,
 /obj/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "eQK" = (
 /obj/floor_decal/techfloor{
 	dir = 9
@@ -18429,20 +18417,14 @@
 "htK" = (
 /obj/structure/table/rack,
 /obj/floor_decal/industrial/outline/grey,
-/obj/item/storage/box/ammo/light_bullpup,
-/obj/item/storage/box/ammo/light_bullpup,
-/obj/item/gun/projectile/automatic/bullpup_rifle/light{
-	starts_loaded = 0
-	},
-/obj/item/gun/projectile/automatic/bullpup_rifle/light{
-	starts_loaded = 0
-	},
-/obj/item/gun/projectile/automatic/bullpup_rifle/light{
-	starts_loaded = 0
-	},
-/obj/item/gun/projectile/automatic/bullpup_rifle/light{
-	starts_loaded = 0
-	},
+/obj/item/storage/box/ammo/smg/ap,
+/obj/item/storage/box/ammo/smg/ap,
+/obj/item/storage/box/ammo/assault,
+/obj/item/gun/projectile/automatic/sec_smg/empty,
+/obj/item/gun/projectile/automatic/sec_smg/empty,
+/obj/item/gun/projectile/automatic/sec_smg/empty,
+/obj/item/gun/projectile/automatic/sec_smg/empty,
+/obj/item/gun/projectile/sniper/panther/empty,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "hub" = (
@@ -18591,12 +18573,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/hardstorage/aux)
-"hzl" = (
-/obj/structure/sign/warning/secure_area{
-	dir = 1
-	},
-/turf/simulated/wall/prepainted,
-/area/security/secure_storage)
 "hzT" = (
 /obj/item/device/radio/intercom/department/medbay{
 	dir = 1;
@@ -18777,13 +18753,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/development)
-"hLf" = (
-/obj/floor_decal/techfloor{
-	dir = 1
-	},
-/obj/floor_decal/techfloor,
-/turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
 "hLD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -19484,7 +19453,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "iLB" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor,
@@ -19807,7 +19776,7 @@
 	},
 /obj/item/storage/box/trackimp,
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "jhb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/civilian,
@@ -19825,7 +19794,7 @@
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/security/secure_storage)
+/area/security/armoury)
 "jhq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -21022,7 +20991,7 @@
 	name = "Security Storage"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/security/secure_storage)
+/area/security/armoury)
 "kDb" = (
 /obj/floor_decal/industrial/warning{
 	icon_state = "warning"
@@ -21277,7 +21246,7 @@
 /obj/item/storage/box/ammo/beanbags,
 /obj/item/storage/box/ammo/beanbags,
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "kTb" = (
 /obj/floor_decal/corner/pink/mono,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -24167,10 +24136,10 @@
 "ozG" = (
 /obj/structure/table/rack,
 /obj/floor_decal/industrial/outline/grey,
-/obj/item/storage/box/ammo/pistol/rubber,
-/obj/item/storage/box/ammo/pistol/rubber,
+/obj/item/storage/box/ammo/small/double,
+/obj/item/storage/box/ammo/small/double,
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "oAp" = (
 /obj/floor_decal/corner/research{
 	dir = 10
@@ -24547,10 +24516,10 @@
 /obj/item/gun/projectile/automatic/sec_smg/empty,
 /obj/item/gun/projectile/automatic/sec_smg/empty,
 /obj/item/gun/projectile/automatic/sec_smg/empty,
-/obj/item/storage/box/ammo/smg/rubber,
-/obj/item/storage/box/ammo/smg/rubber,
+/obj/item/storage/box/ammo/smg,
+/obj/item/storage/box/ammo/smg,
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "oXx" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -24563,7 +24532,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "oZb" = (
 /obj/floor_decal/corner/paleblue{
 	dir = 10
@@ -24886,8 +24855,8 @@
 /area/maintenance/firstdeck/aftport)
 "pxv" = (
 /obj/floor_decal/industrial/outline/grey,
-/obj/item/storage/box/ammo/pistol,
-/obj/item/storage/box/ammo/pistol,
+/obj/item/storage/box/ammo/small/double,
+/obj/item/storage/box/ammo/small/double,
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
@@ -25745,10 +25714,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "qyX" = (
-/obj/machinery/door/airlock/highsecurity{
-	name = "Security Armory"
-	},
-/obj/machinery/door/firedoor,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -25756,7 +25721,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/steel_ridged,
+/turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "qzb" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
@@ -26809,8 +26774,9 @@
 "rEK" = (
 /obj/structure/table/rack,
 /obj/floor_decal/industrial/outline/grey,
-/obj/item/storage/box/ammo/stunshells,
-/obj/item/storage/box/ammo/stunshells,
+/obj/item/storage/box/ammo/shotgunshells,
+/obj/item/storage/box/ammo/shotgunshells,
+/obj/item/storage/box/ammo/shotgunshells,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
 "rFb" = (
@@ -26906,16 +26872,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
-"rKP" = (
-/obj/structure/sign/warning/secure_area/armory{
-	dir = 1;
-	pixel_y = -32
-	},
-/obj/floor_decal/techfloor{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
 "rLb" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/wallframe_spawn/reinforced_phoron,
@@ -28322,15 +28278,6 @@
 	},
 /turf/simulated/open,
 /area/maintenance/firstdeck/aftport)
-"tgT" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/floor_decal/corner/red{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
 "thb" = (
 /obj/machinery/atmospherics/binary/pump,
 /obj/structure/cable/green{
@@ -28392,7 +28339,7 @@
 /area/hallway/primary/firstdeck/aft)
 "tiQ" = (
 /turf/simulated/wall/prepainted,
-/area/security/secure_storage)
+/area/security/armoury)
 "tkb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -29058,6 +29005,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/sign/warning/secure_area/armory{
+	dir = 1;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/storage)
 "usV" = (
@@ -29487,12 +29438,12 @@
 "vjY" = (
 /obj/structure/table/rack,
 /obj/floor_decal/industrial/outline/grey,
-/obj/item/storage/box/ammo/doublestack,
-/obj/item/storage/box/ammo/doublestack,
-/obj/item/gun/projectile/pistol/m22f/empty,
-/obj/item/gun/projectile/pistol/m22f/empty,
-/obj/item/gun/projectile/pistol/m22f/empty,
-/obj/item/gun/projectile/pistol/m22f/empty,
+/obj/item/storage/box/ammo/small/double/ap,
+/obj/item/storage/box/ammo/small/double/ap,
+/obj/item/gun/projectile/pistol/pdw/empty,
+/obj/item/gun/projectile/pistol/pdw/empty,
+/obj/item/gun/projectile/pistol/pdw/empty,
+/obj/item/gun/projectile/pistol/pdw/empty,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "vkW" = (
@@ -29751,17 +29702,6 @@
 "vMH" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/security/locker)
-"vPW" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
-/obj/floor_decal/techfloor,
-/obj/floor_decal/techfloor{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/armoury)
 "vSq" = (
 /obj/structure/table/rack,
 /obj/item/tank/hydrogen,
@@ -29867,13 +29807,8 @@
 /obj/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "wcQ" = (
 /obj/machinery/pager/security{
 	pixel_x = -25
@@ -30428,11 +30363,6 @@
 /area/maintenance/firstdeck/centralstarboard)
 "xFx" = (
 /obj/floor_decal/industrial/outline/grey,
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -28
-	},
-/obj/structure/cable/green,
 /obj/structure/table/rack,
 /obj/item/gun/launcher/grenade,
 /obj/item/storage/box/teargas,
@@ -30440,7 +30370,7 @@
 /obj/item/storage/box/flashbangs,
 /obj/item/storage/box/flashbangs,
 /turf/simulated/floor/tiled/dark,
-/area/security/secure_storage)
+/area/security/armoury)
 "xFL" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/turbolift/robotics_lift)
@@ -30515,9 +30445,6 @@
 "xRh" = (
 /turf/simulated/wall/prepainted,
 /area/security/processing)
-"xRu" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/security/armoury)
 "xSd" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 5
@@ -38262,9 +38189,9 @@ tiQ
 oXv
 aOE
 kSs
-xRu
+umz
 sBg
-vPW
+umz
 rEK
 tAS
 tAS
@@ -38462,9 +38389,9 @@ cZi
 ujx
 tiQ
 ozG
-hLf
+eHp
 aPu
-xRu
+umz
 uie
 umz
 pxv
@@ -38666,7 +38593,7 @@ tiQ
 aMC
 eHp
 xFx
-xRu
+umz
 aKv
 dPr
 aWQ
@@ -38864,11 +38791,11 @@ gGO
 daN
 aKw
 aLw
-hzl
+tiQ
 jft
 wbE
-rKP
-xRu
+bii
+umz
 hWR
 lcI
 bii
@@ -39268,11 +39195,11 @@ aLz
 uRO
 enM
 usN
-hzl
+tiQ
 iLA
-tgT
-dIw
-xRu
+vFa
+etI
+umz
 eqZ
 vFa
 etI
@@ -39474,7 +39401,7 @@ tiQ
 ePu
 aOG
 jhf
-xRu
+umz
 pud
 rby
 buX

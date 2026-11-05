@@ -79,6 +79,7 @@
 	var/datum/vector_loc/location		// current location of the projectile in pixel space
 	var/matrix/effect_transform			// matrix to rotate and scale projectile effects - putting it here so it doesn't
 										//  have to be recreated multiple times
+	var/subsonic = FALSE				// below the speed of sound?
 
 /obj/item/projectile/Initialize()
 	damtype = damage_type //TODO unify these vars properly
@@ -204,7 +205,6 @@
 
 	firer = user
 	shot_from = launcher.name
-	silenced = launcher.silenced
 
 	return launch(target, target_zone, x_offset, y_offset)
 

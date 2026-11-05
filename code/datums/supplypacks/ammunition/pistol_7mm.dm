@@ -30,7 +30,7 @@
 /singleton/hierarchy/supply_pack/ammunition/p7_mag_smg_top
 	name = "Magazines - 7mm SMG top mounted, 8x"
 	contains = list(
-		/obj/item/ammo_magazine/smg_top/empty = 8
+		/obj/item/ammo_magazine/smg_quad/empty = 8
 	)
 	cost = 10
 	containername = "top mounted SMG magazines"

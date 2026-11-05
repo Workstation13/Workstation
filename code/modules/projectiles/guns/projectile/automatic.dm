@@ -28,7 +28,8 @@
 			"move_delay" = null,
 			"one_hand_penalty" = 0,
 			"burst_accuracy" = null,
-			"dispersion" = null
+			"dispersion" = null,
+			"can_autofire" = FALSE
 		),
 		list(
 			"mode_name" = "4-round bursts",
@@ -37,16 +38,19 @@
 			"move_delay" = 4,
 			"one_hand_penalty" = 1,
 			"burst_accuracy" = list(0, 0, -1, -1),
-			"dispersion" = list(0.0, 0.0, 0.5, 0.6)
+			"dispersion" = list(0.0, 0.0, 0.5, 0.6),
+			"can_autofire" = FALSE
 		),
 		list(
-			"mode_name" = "long bursts",
-			"burst" = 8,
-			"fire_delay" = null,
+			"mode_name" = "full_auto",
+			"burst" = 1,
+			"fire_delay" = 2,
 			"move_delay" = 4,
 			"one_hand_penalty" = 2,
 			"burst_accuracy" = list(0, 0, -1, -1, -1, -1, -2, -2),
-			"dispersion" = list(0.0, 0.0, 0.5, 0.6, 0.8, 1.0, 1.0, 1.2)
+			"dispersion" = list(0.0, 0.0, 0.5, 0.6, 0.8, 1.0, 1.0, 1.2),
+			"can_autofire" = TRUE
+
 		)
 	)
 
@@ -69,29 +73,22 @@
 		list(
 			"mode_name" = "semi auto",
 			"burst" = 1,
-			"fire_delay" = null,
+			"fire_delay" = 4, //open bolt
 			"move_delay" = null,
 			"one_hand_penalty" = 0,
 			"burst_accuracy" = null,
-			"dispersion" = null
+			"dispersion" = null,
+			"can_autofire" = FALSE
 		),
 		list(
-			"mode_name" = "3-round bursts",
-			"burst" = 3,
-			"fire_delay" = null,
-			"move_delay" = 4,
-			"one_hand_penalty" = 1,
-			"burst_accuracy" = list(0, -1, -1),
-			"dispersion" = list(0.0, 0.6, 1.0)
-		),
-		list(
-			"mode_name" = "short bursts",
-			"burst" = 5,
-			"fire_delay" = null,
+			"mode_name" = "full auto",
+			"fire_delay" = 0,
+			"burst" = 1,
 			"move_delay" = 4,
 			"one_hand_penalty" = 2,
-			"burst_accuracy" = list(0, -1, -1, -1, -2),
-			"dispersion" = list(0.6, 0.6, 1.0, 1.0, 1.2)
+			"burst_accuracy" = list(0, -1, -2, -2, -3, -3, -4),
+			"dispersion" = list(0.6, 0.6, 1.0, 1.0, 1.4, 1.4, 1.7, 1.7, 2.0, 2.0, 2.3, 2.3, 2.5),
+			"can_autofire" = TRUE
 		)
 	)
 
@@ -152,13 +149,14 @@
 			"dispersion" = list(0.0, 0.6, 1.0)
 		),
 		list(
-			"mode_name" = "short bursts",
-			"burst" = 5,
-			"fire_delay" = null,
+			"mode_name" = "full auto",
+			"fire_delay" = 2,
+			"burst" = 1,
 			"move_delay" = 4,
 			"one_hand_penalty" = 6,
 			"burst_accuracy" = list(0, -1, -1, -1, -2),
-			"dispersion" = list(0.6, 0.6, 1.0, 1.0, 1.2)
+			"dispersion" = list(0.6, 0.6, 1.0, 1.0, 1.2),
+			"can_autofire" = TRUE
 		)
 	)
 
@@ -184,7 +182,7 @@
 	magazine_type = /obj/item/ammo_magazine/rifle
 	one_hand_penalty = 8
 	allowed_magazines = /obj/item/ammo_magazine/rifle
-	accuracy_power = 7
+	accuracy_power = 8
 	accuracy = 2
 	bulk = GUN_BULK_HEAVY_RIFLE
 	wielded_item_state = "arifle-wielded"
@@ -197,29 +195,22 @@
 		list(
 			"mode_name" = "semi auto",
 			"burst" = 1,
-			"fire_delay" = null,
+			"fire_delay" = 3,
 			"move_delay" = null,
 			"one_hand_penalty" = 8,
 			"burst_accuracy" = null,
-			"dispersion" = null
+			"dispersion" = null,
+			"can_autofire" = FALSE
 		),
 		list(
-			"mode_name" = "3-round bursts",
-			"burst" = 3,
-			"fire_delay" = null,
-			"move_delay" = 6,
-			"one_hand_penalty" = 9,
-			"burst_accuracy" = list(0, -1, -1),
-			"dispersion" = list(0.0, 0.6, 1.0)
-		),
-		list(
-			"mode_name" = "short bursts",
-			"burst" = 5,
-			"fire_delay" = null,
+			"mode_name" = "full auto",
+			"fire_delay" = 2,
+			"burst" = 1,
 			"move_delay" = 6,
 			"one_hand_penalty" = 11,
-			"burst_accuracy" = list(0, -1, -2, -3, -3),
-			"dispersion" = list(0.6, 1.0, 1.2, 1.2, 1.5)
+			"burst_accuracy" = list(0, -1, -2, -3, -3, -4, -4, -4, -4),
+			"dispersion" = list(0.6, 1.0, 1.2, 1.5, 2.0, 2.5, 3.2, 3.9, 4),
+			"can_autofire" = TRUE
 		)
 	)
 
@@ -234,7 +225,7 @@
 
 /obj/item/gun/projectile/automatic/sec_smg
 	name = "submachine gun"
-	desc = "The WT-550 Saber is a cheap self-defense weapon, mass-produced by Ward-Takahashi for paramilitary and private use."
+	desc = "The WT-550 Saber is a speciality weapon capable of firing subsonic or armour-piercing rounds from a generous quad-stack magazine. A good all-round solution for when a rifle would be inappropriate."
 	icon = 'icons/obj/guns/sec_smg.dmi'
 	icon_state = "smg"
 	item_state = "wt550"
@@ -245,13 +236,13 @@
 	slot_flags = SLOT_BELT
 	ammo_type = /obj/item/ammo_casing/pistol/small
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/smg_top
-	allowed_magazines = /obj/item/ammo_magazine/smg_top
+	magazine_type = /obj/item/ammo_magazine/smg_quad
+	allowed_magazines = /obj/item/ammo_magazine/smg_quad
 	accuracy_power = 7
 	one_hand_penalty = 3
 	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
 	barrel_thread = TRUE
-	silencer_offset = 6
+	silencer_offset = 0
 
 	//machine pistol, like SMG but easier to one-hand with
 	firemodes = list(
@@ -262,36 +253,37 @@
 			"move_delay" = null,
 			"one_hand_penalty" = 3,
 			"burst_accuracy" = null,
-			"dispersion" = null
+			"dispersion" = null,
+			"can_autofire" = FALSE
 		),
 		list(
 			"mode_name" = "3-round bursts",
 			"burst" = 3,
-			"fire_delay" = null,
+			"fire_delay" = 1,
 			"move_delay" = 4,
 			"one_hand_penalty" = 4,
 			"burst_accuracy" = list(0, -1, -1),
-			"dispersion" = list(0.0, 0.6, 1.0)
+			"dispersion" = list(0.0, 0.6, 1.0),
+			"can_autofire" = FALSE
 		),
 		list(
-			"mode_name" = "short bursts",
-			"burst" = 5,
-			"fire_delay" = null,
+			"mode_name" = "full auto",
+			"burst" = 1,
+			"fire_delay" = 1,
 			"move_delay" = 4,
 			"one_hand_penalty" = 5,
-			"burst_accuracy" = list(0, -1, -1, -1, -2),
-			"dispersion" = list(0.6, 0.6, 1.0, 1.0, 1.2)
+			"burst_accuracy" = list(0, -1, -1, -1, -1, -2),
+			"dispersion" = list(0.6, 0.6, 0.8, 1.0),
+			"can_autofire" = TRUE
 		)
 	)
 
 /obj/item/gun/projectile/automatic/sec_smg/on_update_icon()
 	..()
 	if(ammo_magazine)
-		AddOverlays(image(icon, "mag-[round(length(ammo_magazine.stored_ammo),5)]"))
+		AddOverlays(image(icon, "mag"))
 	if(ammo_magazine && LAZYLEN(ammo_magazine.stored_ammo))
 		AddOverlays(image(icon, "ammo-ok"))
-	else
-		AddOverlays(image(icon, "ammo-bad"))
 
 /obj/item/gun/projectile/automatic/sec_smg/empty
 	starts_loaded = FALSE

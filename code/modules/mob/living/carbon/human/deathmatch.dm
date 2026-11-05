@@ -1,5 +1,5 @@
 /singleton/hierarchy/outfit/deathmatch
-	name = "Test Subject"
+	name = "Test Subject - Default"
 	uniform = /obj/item/clothing/under/color/grey
 	shoes = /obj/item/clothing/shoes/jackboots
 	glasses = /obj/item/clothing/glasses/sunglasses
@@ -16,11 +16,13 @@
 	backpack_contents = list(/obj/item/storage/box/survival, /obj/item/ammo_magazine/speedloader/small)
 
 /singleton/hierarchy/outfit/deathmatch/gopnik
+	name = "Gopnik"
 	uniform = /obj/item/clothing/under/casual_pants/track
 	head = /obj/item/clothing/mask/bandana/skull
 	shoes = /obj/item/clothing/shoes/athletic
 
 /singleton/hierarchy/outfit/deathmatch/sindy
+	name = "Syndie"
 	head = /obj/item/clothing/head/chefhat
 	uniform = /obj/item/clothing/under/color/grey/sindy
 	shoes = /obj/item/clothing/shoes/athletic
@@ -29,35 +31,42 @@
 	accessories = list(/obj/item/clothing/accessory/toggleable/hawaii/red)
 
 /singleton/hierarchy/outfit/deathmatch/clown
+	name = "Evil Clown"
 	uniform = /obj/item/clothing/under/color/rainbow
 	mask = /obj/item/clothing/mask/gas/clown_hat
 	back = /obj/item/storage/backpack/clown
 
 /singleton/hierarchy/outfit/deathmatch/luddite
+	name = "Luddite"
 	head = /obj/item/clothing/head/culthood
 	uniform = /obj/item/clothing/under/color/red
 	shoes = /obj/item/clothing/shoes/sandal
 
 /singleton/hierarchy/outfit/deathmatch/agent
+	name = "Secret Agent"
 	uniform = /obj/item/clothing/under/suit_jacket
 	shoes = /obj/item/clothing/shoes/dress
 
 /singleton/hierarchy/outfit/deathmatch/tactical
+	name = "Tacticool Operator"
 	uniform = /obj/item/clothing/under/tactical
 	mask = /obj/item/clothing/mask/balaclava
 
 /singleton/hierarchy/outfit/deathmatch/cowboy
+	name = "Cowboy"
 	uniform = /obj/item/clothing/under/frontier
 	head = /obj/item/clothing/head/cowboy_hat
 	mask = /obj/item/clothing/mask/bandana/red
 	shoes = /obj/item/clothing/shoes/leather
 
 /singleton/hierarchy/outfit/deathmatch/soviet
+	name = "Soviet Soldier"
 	uniform = /obj/item/clothing/under/soviet
 	shoes = /obj/item/clothing/shoes/combat
 	head = /obj/item/clothing/head/ushanka
 
 /singleton/hierarchy/outfit/deathmatch/pirate
+	name = "Pirate"
 	uniform = /obj/item/clothing/under/pirate
 	shoes = /obj/item/clothing/shoes/sandal
 	head = /obj/item/clothing/mask/bandana/red

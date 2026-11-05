@@ -128,32 +128,36 @@
 	ammo_type = /obj/item/ammo_casing/pistol
 	matter = list(MATERIAL_STEEL = 1200)
 	caliber = CALIBER_PISTOL
-	max_ammo = 16
+	max_ammo = 32
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/machine_pistol/empty
 	initial_ammo = 0
 
-/obj/item/ammo_magazine/smg_top
-	name = "top mounted magazine"
-	icon_state = "smg_top"
+/obj/item/ammo_magazine/smg_quad
+	name = "quad-stack magazine"
+	icon_state = "quadhold"
 	mag_type = MAGAZINE
 	ammo_type = /obj/item/ammo_casing/pistol/small
 	matter = list(MATERIAL_STEEL = 1200)
 	caliber = CALIBER_PISTOL_SMALL
-	max_ammo = 20
+	max_ammo = 50
 	multiple_sprites = 1
 
-/obj/item/ammo_magazine/smg_top/empty
+/obj/item/ammo_magazine/smg_quad/empty
 	initial_ammo = 0
 
-/obj/item/ammo_magazine/smg_top/rubber
+/obj/item/ammo_magazine/smg_quad/rubber
 	labels = list("rubber")
 	ammo_type = /obj/item/ammo_casing/pistol/small/rubber
 
-/obj/item/ammo_magazine/smg_top/practice
+/obj/item/ammo_magazine/smg_quad/practice
 	labels = list("practice")
 	ammo_type = /obj/item/ammo_casing/pistol/small/practice
+
+/obj/item/ammo_magazine/smg_quad/ap
+	labels = list("armour piercing")
+	ammo_type = /obj/item/ammo_casing/pistol/small/ap
 
 /obj/item/ammo_magazine/smg
 	name = "box magazine"
@@ -163,7 +167,7 @@
 	caliber = CALIBER_PISTOL
 	matter = list(MATERIAL_STEEL = 1500)
 	ammo_type = /obj/item/ammo_casing/pistol
-	max_ammo = 20
+	max_ammo = 30
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/smg/empty
@@ -217,6 +221,18 @@
 
 /obj/item/ammo_magazine/pistol/small/empty
 	initial_ammo = 0
+
+/obj/item/ammo_magazine/pistol/small/double
+	icon_state = "doublehold"
+	matter = list(MATERIAL_STELL = 1000)
+	max_ammo = 20
+
+/obj/item/ammo_magazine/pistol/small/double/empty
+	initial_ammo = 0
+
+/obj/item/ammo_magazine/pistol/small/double/ap
+	labels = ("armour piercing")
+	ammo_type = /obj/item/ammo_casing/pistol/small/ap
 
 /obj/item/ammo_magazine/magnum
 	name = "magazine"
@@ -318,7 +334,7 @@
 	caliber = CALIBER_RIFLE
 	matter = list(MATERIAL_STEEL = 1800)
 	ammo_type = /obj/item/ammo_casing/rifle
-	max_ammo = 20
+	max_ammo = 30
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/mil_rifle
@@ -329,7 +345,7 @@
 	caliber = CALIBER_RIFLE_MILITARY
 	matter = list(MATERIAL_STEEL = 1800)
 	ammo_type = /obj/item/ammo_casing/rifle/military
-	max_ammo = 18
+	max_ammo = 20
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/mil_rifle/heavy
@@ -346,7 +362,7 @@
 	icon_state = "bullpup_light"
 	labels = list("light")
 	ammo_type = /obj/item/ammo_casing/rifle/military/light
-	max_ammo = 14
+	max_ammo = 25
 
 /obj/item/ammo_magazine/mil_rifle/light/empty
 	initial_ammo = 0

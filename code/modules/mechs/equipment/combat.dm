@@ -36,7 +36,7 @@
 	use_external_power = TRUE
 	has_safety = FALSE
 	self_recharge = TRUE
-	fire_delay = 15
+	fire_delay = 10
 	accuracy = 2
 
 /obj/item/gun/energy/get_hardpoint_maptext()

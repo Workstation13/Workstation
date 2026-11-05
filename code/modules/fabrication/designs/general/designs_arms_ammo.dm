@@ -27,7 +27,7 @@
 
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_smg_rubber
 	name = "ammunition (SMG rubber) top mounted"
-	path = /obj/item/ammo_magazine/smg_top/rubber
+	path = /obj/item/ammo_magazine/smg_quad/rubber
 
 /datum/fabricator_recipe/arms_ammo/hidden/flamethrower
 	path = /obj/item/flamethrower/full
@@ -78,7 +78,7 @@
 
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_smg_topmounted
 	name = "ammunition (SMG, top mounted)"
-	path = /obj/item/ammo_magazine/smg_top
+	path = /obj/item/ammo_magazine/smg_quad
 
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_arifle
 	name = "ammunition (rifle magazine)"

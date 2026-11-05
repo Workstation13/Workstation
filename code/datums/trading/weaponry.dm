@@ -34,7 +34,7 @@
 		/obj/item/ammo_magazine/box/pistol/empty = TRADER_BLACKLIST,
 		/obj/item/ammo_magazine/box/machinegun/empty = TRADER_BLACKLIST,
 		/obj/item/ammo_magazine/machine_pistol/empty = TRADER_BLACKLIST,
-		/obj/item/ammo_magazine/smg_top/empty = TRADER_BLACKLIST,
+		/obj/item/ammo_magazine/smg_quad/empty = TRADER_BLACKLIST,
 		/obj/item/ammo_magazine/magnum/empty = TRADER_BLACKLIST,
 		/obj/item/clothing/accessory/storage/holster = TRADER_ALL
 	)

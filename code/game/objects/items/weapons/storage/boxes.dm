@@ -169,6 +169,20 @@
 	name = "box of insulated beakers"
 	startswith = list(/obj/item/reagent_containers/glass/beaker/insulated = 7)
 
+/obj/item/storage/box/armor
+	name = "armor plate box"
+	icon = 'icons/obj/weapons/ammo_boxes.dmi'
+	icon_state = "ammo"
+	desc = "A sturdy metal box with a big warning symbol on the front.<br>WARNING: Ceramic armor plates. Do not drop."
+	use_sound = 'sound/effects/closet_open.ogg'
+
+/obj/item/storage/box/armor/medium
+	name = "box of medium-grade armor plates"
+	startswith = list(/obj/item/clothing/accessory/armor_plate/medium = 6)
+
+/obj/item/storage/box/armor/merc
+	name = "box of high-grade armor plates"
+	startswith = list(/obj/item/clothing/accessory/armor_plate/merc = 6)
 
 /obj/item/storage/box/ammo
 	name = "magazine box"
@@ -248,15 +262,26 @@
 	name = "box of doublestack magazines - rubber"
 	startswith = list(/obj/item/ammo_magazine/pistol/double/rubber = 6)
 
+/obj/item/storage/box/ammo/small/double
+	name = "box of pistol magazines - subsonic"
+	startswith = list(/obj/item/ammo_magazine/pistol/small/double = 6)
+
+/obj/item/storage/box/ammo/small/double/ap
+	name = "box of pistol magazines - armor piercing"
+	startswith = list(/obj/item/ammo_magazine/pistol/small/double = 6)
 
 /obj/item/storage/box/ammo/smg
-	name = "box of SMG magazines - lethal"
-	startswith = list(/obj/item/ammo_magazine/smg_top = 7)
+	name = "box of SMG magazines - subsonic"
+	startswith = list(/obj/item/ammo_magazine/smg_quad/ap = 7)
 
 
 /obj/item/storage/box/ammo/smg/rubber
 	name = "box of SMG magazines - rubber"
-	startswith = list(/obj/item/ammo_magazine/smg_top/rubber = 7)
+	startswith = list(/obj/item/ammo_magazine/smg_quad/rubber = 7)
+
+/obj/item/storage/box/ammo/smg/ap
+	name = "box of SMG magazines - armour piercing"
+	startswith = list(/obj/item/ammo_magazine/smg_quad/ap = 7)
 
 /obj/item/storage/box/ammo/heavy_bullpup
 	name = "box of heavy bullpup magazines"
@@ -265,6 +290,10 @@
 /obj/item/storage/box/ammo/light_bullpup
 	name = "box of light bullpup magazines"
 	startswith = list(/obj/item/ammo_magazine/mil_rifle/light = 6)
+
+/obj/item/storage/box/ammo/assault
+	name = "box of assault rifle magazines"
+	startswith = list(/obj/item/ammo_magazine/rifle = 6)
 
 
 /obj/item/storage/box/flashbangs
