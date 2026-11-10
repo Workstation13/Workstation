@@ -243,27 +243,27 @@ GLOBAL_LIST_EMPTY(admin_departments)
 
 	flick("faxreceive", src)
 	playsound(loc, "sound/machines/dotprinter.ogg", 50, 1)
-	visible_message(SPAN_NOTICE("\The [src] pings, \"New fax received from [origin_department].\""))
+	visible_message(SPAN_NOTICE("\The [src] pings, \"New fax received.\""))
 
 	// Notify any linked PDAs
 	if (LAZYLEN(linked_pdas))
 		for (var/obj/item/modular_computer/pda/pda as anything in linked_pdas)
 			if (!AreConnectedZLevels(get_z(src), get_z(pda)))
 				continue
-			pda.receive_notification("Fax from [origin_department] received in [department].")
+			pda.receive_notification("Fax received in [department].")
 
 	// give the sprite some time to flick
 	sleep(20)
 
 	if (istype(incoming, /obj/item/paper))
 		var/obj/item/paper/newcopy = copy(incoming, FALSE)
-		newcopy.SetName("[origin_department] - [newcopy.name]")
+		newcopy.SetName(newcopy.name)
 	else if (istype(incoming, /obj/item/paper))
 		var/obj/item/paper/newcopy = photocopy(incoming, FALSE)
-		newcopy.SetName("[origin_department] - [newcopy.name]")
+		newcopy.SetName(newcopy.name)
 	else if (istype(incoming, /obj/item/paper_bundle))
 		var/obj/item/paper_bundle/newcopy = bundlecopy(incoming, FALSE)
-		newcopy.SetName("[origin_department] - [newcopy.name]")
+		newcopy.SetName(newcopy.name)
 	else
 		return
 

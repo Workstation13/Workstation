@@ -25,15 +25,13 @@
 	company_short = "SolGov"
 
 	map_admin_faxes = list(
-		"Expeditionary Corps Command",
-		"Expeditionary Corps Logistics",
-		"EXO Head Office",
-		"EXO Internal Affairs",
-		"SFP Territory Support",
-		"SFP Special Investigations",
-		"SFP Fugitive Recovery",
-		"Sol Fleet Mars Command",
-		"Bureau of Diplomatic Affairs",
+		"NanoTrasen Mission Command",
+		"NanoTrasen Logistics",
+		"NAP Territory Support",
+		"NAP Special Investigations",
+		"NAP Fugitive Recovery",
+		"Sol Fleet Frontier Outpost Alfa-3",
+		"Ministry of Public Safety",
 		"Emergency Management Bureau",
 		"Secure Routing Service"
 	)
