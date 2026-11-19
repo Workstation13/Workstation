@@ -1,6 +1,6 @@
 SUBSYSTEM_DEF(supply)
 	name = "Supply"
-	wait = 5 MINUTES // Each fire is one account transaction, so pay the stipend in larger, less frequent chunks.
+	wait = 0.5 MINUTES // Each fire is one account transaction, so pay the stipend in larger, less frequent chunks.
 	priority = SS_PRIORITY_SUPPLY
 	//Initializes at default time
 	flags = SS_NO_TICK_CHECK
@@ -24,17 +24,32 @@ SUBSYSTEM_DEF(supply)
 	var/list/donelist = list()
 	var/list/master_supply_list = list()
 	//shuttle movement
-	var/movetime = 1200
+	var/movetime = 0
 	var/datum/shuttle/autodock/ferry/supply/shuttle
 	var/list/point_source_descriptions = list(
 		"time" = "Base station supply",
 		"manifest" = "From exported manifests",
 		"crate" = "From exported crates",
-		"gep" = "From uploaded good explorer points",
+		"gep" = "From uploaded survey data",
 		"anomaly" = "From scanned and categorized anomalies",
 		"animal" = "From captured exotic alien fauna",
+		"machinery" = "From exported machinery",
+		"electronics" = "From exported electronics",
+		"gas" = "From exported gases",
+		"liquid" = "From exported chemicals and liquid fuels",
+		"firearms" = "From exported firearms",
+		"foodstuffs" = "From exported foodstuffs",
+		"clothing" = "From exported apparel",
+		"miscellaneous" = "From other miscellaneous exports",
+		"fine" = "From fines",
 		"total" = "Total" // If you're adding additional point sources, add it here in a new line. Don't forget to put a comma after the old last line.
 	)
+	var/list/fines = list()
+	var/base_fine_delay = 0 MINUTES
+	var/fine_delay = 0
+	var/last_fine = 0
+	var/resell_penalty = 0.5 //multiplier for price of miscellaneous items sold
+	var/demand_limit = 400 //amount of supply points that can be gotten from each category of miscellaneous items
 
 /datum/controller/subsystem/supply/Initialize(start_uptime)
 	ordernum = rand(1,9000)
@@ -50,12 +65,16 @@ SUBSYSTEM_DEF(supply)
 	for (var/material/mat in SSmaterials.materials)
 		if(mat.sale_price > 0)
 			point_source_descriptions[mat.display_name] = "From exported [mat.display_name]"
+	fine_delay = base_fine_delay + rand(-base_fine_delay / 5, base_fine_delay / 5)
 
 // Just add money over time.
 /datum/controller/subsystem/supply/fire()
 	add_points_from_source(points_per_process, "time")
 	deposit_income("Supply stipend")
-
+	if (world.time > fine_delay + last_fine)
+		fine_delay = base_fine_delay + rand(-base_fine_delay / 5, base_fine_delay / 5)
+		last_fine = world.time
+		issue_fines()
 
 /datum/controller/subsystem/supply/UpdateStat(time)
 	if (PreventUpdateStat(time))
@@ -79,7 +98,9 @@ SUBSYSTEM_DEF(supply)
 	return round(amount * GLOB.using_map.supply_price_multiplier)
 
 /// Records income of `amount` supply points from `source`. Call deposit_income() to pay it into the account.
-/datum/controller/subsystem/supply/proc/add_points_from_source(amount, source)
+/datum/controller/subsystem/supply/proc/add_points_from_source(amount, source, safe = FALSE) //use safe if interacting with the demand system
+	if (safe)
+		amount = min(amount, demand_limit)
 	var/money = to_currency(amount)
 	pending_income += money
 	point_sources[source] += money
@@ -116,7 +137,7 @@ SUBSYSTEM_DEF(supply)
 /datum/controller/subsystem/supply/proc/forbidden_atoms_check(atom/A)
 	if (istype(A, /mob/living))
 		var/mob/living/mob = A
-		if (istype(mob, /mob/living/simple_animal/hostile/human) || mob.mind)
+		if ((istype(mob, /mob/living/simple_animal/hostile/human) || mob.mind) && mob.health > 0)
 			return TRUE
 	if (istype(A, /obj/item/disk/nuclear))
 		return TRUE
@@ -129,6 +150,32 @@ SUBSYSTEM_DEF(supply)
 		var/atom/B = A.contents[i]
 		if(.(B))
 			return TRUE
+
+/datum/controller/subsystem/supply/proc/issue_fines()
+	for (var/fine in fines)
+		var/amount = fines[fine]
+		if (amount > 0)
+			add_points_from_source(-amount, "fine")
+			fines[fine] = 0
+		var/list/fine_book = typesof(/obj/item/paper/fine)
+		for (var/i in fine_book)
+			i = new i
+			if (istype(i, /obj/item/paper/fine))
+				var/obj/item/paper/fine/fine_letter = i
+				if (fine_letter.subject == fine)
+					fine_letter.update_fine(to_currency(amount))
+					send_fax_loop(fine_letter, fine_letter.destinations, fine_letter.origin)
+					break
+			qdel(i)
+
+/datum/controller/subsystem/supply/proc/add_fine(type, amount)
+	fines[type] += amount
+
+/datum/controller/subsystem/supply/proc/get_supply_value(initial_value, sale_type)
+	return initial_value * resell_penalty * get_demand(sale_type) / GLOB.using_map.supply_price_multiplier
+
+/datum/controller/subsystem/supply/proc/get_demand(sale) //penalizes selling the same type of thing repeatedly
+	return clamp(1 - point_sources[sale] / to_currency(demand_limit), 0, 1)
 
 /datum/controller/subsystem/supply/proc/sell()
 	var/list/material_count = list()
@@ -166,6 +213,9 @@ SUBSYSTEM_DEF(supply)
 					if(istype(A, /obj/item/disk/survey))
 						var/obj/item/disk/survey/D = A
 						add_points_from_source(round(D.Value() * 0.05), "gep")
+
+					else
+						sell_misc_item(A)
 
 			// Sell artefacts (in anomaly cages)
 			if (istype(AM, /obj/machinery/anomaly_container))
@@ -229,6 +279,20 @@ SUBSYSTEM_DEF(supply)
 					qdel(SC.contained)
 					add_points_from_source(points_per_animal, "animal")
 
+			if (istype (AM, /obj/machinery/artifact)) //unsecured anomaly
+				add_fine("anomaly", 150)
+			else if (istype(AM, /obj/machinery))
+				sell_machinery(AM)
+
+			if (!istype(AM, /obj/item) && !ismob(AM)) //items already include the reagents inside in their price and you probably can't extract chemicals from a body
+				sell_liquid(AM)
+
+			if (ishuman(AM) || istype(AM, /mob/living/simple_animal/hostile/human)) //unsolicited human remains
+				add_fine("corpse", 100)
+				log_and_message_admins("corpse of [AM] sent on cargo drone")
+			else if (isliving(AM)) //unsecured animal/carcass
+				add_fine("carcass", rand(20, 60))
+
 			qdel(AM)
 
 	if(length(material_count))
@@ -236,6 +300,76 @@ SUBSYSTEM_DEF(supply)
 			add_points_from_source(material_count[material_type], material_type)
 
 	deposit_income("Export sale")
+
+	if(length(material_count))
+		for(var/material_type in material_count)
+			add_points_from_source(material_count[material_type], material_type)
+
+	deposit_income("Export sale")
+
+/datum/controller/subsystem/supply/proc/sale_type(produce)
+	. = "miscellaneous"
+	if (istype(produce, /obj/machinery))
+		. = "machinery"
+	if (istype(produce, /obj/item/gun))
+		. = "firearms"
+	if (istype(produce, /obj/structure))
+		. = "furniture"
+	if (istype(produce, /obj/item/stock_parts))
+		. = "electronics"
+	if (istype(produce, /obj/item/modular_computer))
+		. = "electronics"
+	if (istype(produce, /obj/item/organ) || istype(produce, /obj/item/reagent_containers/food/snacks/organ))
+		. = "organs"
+	if (istype(produce, /obj/item/reagent_containers/food))
+		. = "foodstuffs"
+	if (istype(produce, /obj/item/clothing))
+		. = "clothing"
+
+/datum/controller/subsystem/supply/proc/sell_misc_item(atom/movable/produce)
+	var/sale = "miscellaneous"
+	var/value = 0
+	value = (get_value(produce) - sell_liquid(produce)) //items include their reagents in their price, so they must be separated
+	sale = sale_type(produce)
+	switch (sale)
+		if ("machinery")
+			sell_machinery(produce)
+		if ("organs") //selling organs on the open market is illegal
+			add_fine("organs", rand(10, 20))
+			return
+
+	sell_gas(produce)
+	add_points_from_source(get_supply_value(value, sale), sale, TRUE)
+
+/datum/controller/subsystem/supply/proc/sell_machinery(obj/machinery/machine)
+	if (istype(machine, /obj/machinery/portable_atmospherics))
+		sell_gas(machine)
+	add_points_from_source(get_supply_value(get_value(machine), "machinery"), "machinery", TRUE)
+
+/datum/controller/subsystem/supply/proc/sell_gas(obj/container)
+	var/value = 0
+	var/gas_mix = list()
+	if (istype(container, /obj/machinery/portable_atmospherics))
+		var/obj/machinery/portable_atmospherics/can = container
+		gas_mix = can.air_contents.gas
+	else if (istype(container, /obj/item/tank))
+		var/obj/item/tank/tank = container
+		gas_mix = tank.air_contents.gas
+	else
+		return
+	for (var/chem in gas_mix)
+		value += gas_data.price[chem] * gas_mix[chem] / 1000
+	add_points_from_source(get_supply_value(value, "gas"), "gas", TRUE)
+
+/datum/controller/subsystem/supply/proc/sell_liquid(obj/container)
+	var/value = 0
+	var/datum/reagents/reagent_datum = container.reagents
+	if (!reagent_datum)
+		return
+	for (var/datum/reagent/chem in reagent_datum.reagent_list)
+		value += chem.value * chem.volume
+	add_points_from_source(get_supply_value(value, "liquid"), "liquid", TRUE)
+	return value / GLOB.using_map.supply_price_multiplier //items include their reagents in their price, so they must be separated
 
 /datum/controller/subsystem/supply/proc/get_clear_turfs()
 	var/list/clear_turfs = list()

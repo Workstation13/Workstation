@@ -350,6 +350,7 @@
 	taste_description = "clear kvass"
 	color = "#aaddff" // rgb: 170, 221, 255 - very light blue.
 	metabolite_potency = 2.5
+	value = 2
 
 /datum/reagent/ethanol/whiskey
 	name = "Whiskey"
@@ -377,6 +378,7 @@
 	taste_description = "white velvet"
 	color = "#ffddaa" // rgb: 255, 221, 170 - a light cream
 	metabolite_potency = 1
+	value = 2
 
 /datum/reagent/ethanol/herbal
 	name = "Herbal Liquor"

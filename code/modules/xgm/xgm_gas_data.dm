@@ -32,6 +32,9 @@ var/global/datum/xgm_gas_data/gas_data
 	var/list/symbol_html = list()
 	var/list/symbol = list()
 
+	//Supply stuff
+	var/list/price = list()
+
 /singleton/xgm_gas
 	var/id = ""
 	var/name = "Unnamed Gas"
@@ -50,6 +53,7 @@ var/global/datum/xgm_gas_data/gas_data
 	var/hidden_from_codex
 	var/symbol_html = "X"
 	var/symbol = "X"
+	var/price = 500 //per 1000 mol, i.e. per kg of hydrogen
 
 
 /hook/startup/proc/generateGasData()
@@ -80,6 +84,7 @@ var/global/datum/xgm_gas_data/gas_data
 
 		gas_data.breathed_product[gas.id] = gas.breathed_product
 		gas_data.hidden_from_codex[gas.id] = gas.hidden_from_codex
+		gas_data.price[gas.id] = gas.price
 
 	return 1
 

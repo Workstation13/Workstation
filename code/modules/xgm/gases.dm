@@ -7,6 +7,7 @@
 	breathed_product = /datum/reagent/oxygen
 	symbol_html = "O<sub>2</sub>"
 	symbol = "O2"
+	price = 300
 
 
 /singleton/xgm_gas/nitrogen
@@ -16,6 +17,7 @@
 	molar_mass = 0.028	// kg/mol
 	symbol_html = "N<sub>2</sub>"
 	symbol = "N2"
+	price = 200
 
 /singleton/xgm_gas/carbon_dioxide
 	id = GAS_CO2
@@ -53,6 +55,7 @@
 	breathed_product = /datum/reagent/toxin/phoron
 	symbol_html = "Ph"
 	symbol = "Ph"
+	price = 1400
 
 /singleton/xgm_gas/sleeping_agent
 	id = GAS_N2O
@@ -99,6 +102,7 @@
 	if(prob(50))
 		tile_color = RANDOM_RGB
 		overlay_limit = 0.5
+	price = rand()
 
 /singleton/xgm_gas/hydrogen
 	id = GAS_HYDROGEN
@@ -109,6 +113,7 @@
 	burn_product = GAS_STEAM
 	symbol_html = "H<sub>2</sub>"
 	symbol = "H2"
+	//price is balanced by demand and ease of production
 
 /singleton/xgm_gas/hydrogen/deuterium
 	id = GAS_DEUTERIUM
@@ -125,6 +130,7 @@
 	specific_heat = 60
 	symbol_html = "T"
 	symbol = "T"
+	price = 1000 //rare
 
 /singleton/xgm_gas/helium
 	id = GAS_HELIUM
@@ -215,6 +221,7 @@
 	condensation_point =   308.15 // 35C. Dew point is ~20C but this is better for gameplay considerations.
 	symbol_html = "H<sub>2</sub>O"
 	symbol = "H2O"
+	price = 200
 
 /singleton/xgm_gas/sulfurdioxide
 	id = GAS_SULFUR
@@ -224,6 +231,7 @@
 	molar_mass = 0.044	// kg/mol
 	symbol_html = "SO<sub>2</sub>"
 	symbol = "SO2"
+	price = 10
 
 /singleton/xgm_gas/ammonia
 	id = GAS_AMMONIA
@@ -234,6 +242,7 @@
 	breathed_product = /datum/reagent/ammonia
 	symbol_html = "NH<sub>3</sub>"
 	symbol = "NH3"
+	price = 10
 
 /singleton/xgm_gas/carbon_monoxide
 	id = GAS_CO
@@ -243,6 +252,7 @@
 	breathed_product = /datum/reagent/carbon_monoxide
 	symbol_html = "CO"
 	symbol = "CO"
+	price = 10
 
 /singleton/xgm_gas/boron
 	id = GAS_BORON
@@ -253,3 +263,4 @@
 	breathed_product = /datum/reagent/toxin/boron
 	symbol_html = "B"
 	symbol = "B"
+	price = 800
